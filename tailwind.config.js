@@ -4,14 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // TablóStúdió brand colors - adjust based on tablokiraly.hu
+        // TablóStúdió brand colors - tablokiraly.hu inspired
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
           300: '#93c5fd',
           400: '#60a5fa',
-          500: '#3b82f6',
+          500: '#4A90D9',  // tablokiraly kék
           600: '#2563eb',
           700: '#1d4ed8',
           800: '#1e40af',
@@ -30,6 +30,13 @@ module.exports = {
           800: '#1e293b',
           900: '#0f172a',
           950: '#020617',
+        },
+        // Accent szín - sárga CTA gombokhoz
+        accent: {
+          400: '#FBBF24',
+          500: '#F5A623',
+          600: '#D4920F',
+          700: '#B57D0A',
         },
       },
       fontFamily: {

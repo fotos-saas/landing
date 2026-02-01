@@ -20,6 +20,51 @@
   <meta property="twitter:title" content="TablóStúdió - Iskolai tablófotó rendszer">
   <meta property="twitter:description" content="Modern iskolai tablófotó rendszer fotósoknak.">
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tablostudio.hu/">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TablóStúdió",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Modern iskolai tablófotó rendszer fotósoknak. Online képválasztás, automatikus értesítések, online fizetés.",
+    "url": "https://tablostudio.hu",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "HUF",
+      "lowPrice": "4990",
+      "highPrice": "29990",
+      "offerCount": "3"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "TablóStúdió Kft.",
+      "url": "https://tablostudio.hu",
+      "logo": "https://tablostudio.hu/assets/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+36-30-123-4567",
+        "contactType": "customer service",
+        "availableLanguage": "Hungarian"
+      }
+    }
+  }
+  </script>
+
   <title>TablóStúdió - Iskolai tablófotó rendszer fotósoknak</title>
 
   <!-- Favicon -->
@@ -28,6 +73,9 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
   <!-- ============================================
@@ -83,34 +131,95 @@
   <!-- ============================================
        HERO SECTION
        ============================================ -->
-  <section id="hero" class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-    <div class="container-custom">
+  <section id="hero" class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+    <!-- Gradient Background -->
+    <div class="hero-bg absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-primary-700"></div>
+    <!-- Decorative shapes -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
+
+    <div class="container-custom relative z-10">
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-secondary-900 mb-6" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6" data-aos="fade-up">
           Iskolai tablófotózás
-          <span class="gradient-text">egyszerűen</span>
+          <span class="text-accent-400">egyszerűen</span>
         </h1>
-        <p class="text-lg md:text-xl text-secondary-600 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-lg md:text-xl text-primary-100 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
           Modern képválasztó rendszer fotósoknak. Automatizált workflow,
           online galéria, egyszerű képválasztás a szülőknek.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="/register" class="btn-primary text-lg px-8 py-4">
+          <a href="/register" class="btn-accent text-lg px-10 py-4 shadow-xl shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/40">
             Ingyenes próba
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-            </svg>
+            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
           </a>
-          <a href="#hogyan-mukodik" class="btn-secondary text-lg px-8 py-4">
+          <a href="#hogyan-mukodik" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/40 rounded-xl hover:bg-white/15 hover:border-white/60 transition-all duration-200 backdrop-blur-sm">
+            <i data-lucide="play-circle" class="w-5 h-5 mr-2"></i>
             Hogyan működik?
           </a>
         </div>
+
+        <!-- Stats -->
+        <div class="flex flex-wrap justify-center gap-8 md:gap-16 mt-12" data-aos="fade-up" data-aos-delay="250">
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-white">
+              <span class="counter" data-target="500">0</span>+
+            </div>
+            <div class="text-primary-200 text-sm md:text-base mt-1">Elégedett iskola</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-white">
+              <span class="counter" data-target="10000">0</span>+
+            </div>
+            <div class="text-primary-200 text-sm md:text-base mt-1">Elkészült tabló</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-white">
+              <span class="counter" data-target="50000">0</span>+
+            </div>
+            <div class="text-primary-200 text-sm md:text-base mt-1">Elégedett szülő</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Hero Image Placeholder -->
-      <div class="mt-16 max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="300">
-        <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl aspect-video flex items-center justify-center">
-          <p class="text-secondary-400 text-lg">[ Hero kép / Screenshot helye ]</p>
+      <!-- Hero Image / Mockup -->
+      <div class="mt-16 md:mt-20 max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <div class="hero-mockup relative">
+          <!-- Glow effect behind mockup -->
+          <div class="absolute -inset-4 bg-white/10 rounded-3xl blur-2xl"></div>
+          <!-- Laptop Frame -->
+          <div class="relative bg-secondary-900 rounded-t-2xl p-3 md:p-4">
+            <div class="flex items-center gap-2 md:gap-2.5">
+              <div class="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-green-500"></div>
+            </div>
+          </div>
+          <div class="relative bg-gradient-to-br from-secondary-50 to-secondary-100 rounded-b-2xl shadow-2xl aspect-video flex items-center justify-center border-4 border-t-0 border-secondary-900">
+            <!-- App Screenshot Placeholder -->
+            <div class="text-center p-8">
+              <i data-lucide="layout-dashboard" class="w-20 h-20 text-primary-400 mx-auto mb-4"></i>
+              <p class="text-secondary-600 text-xl font-semibold">TablóStúdió Dashboard</p>
+              <p class="text-secondary-400 text-sm mt-2">App screenshot helye</p>
+            </div>
+          </div>
+          <!-- Floating elements -->
+          <div class="hidden md:block absolute -right-12 top-1/4 bg-white rounded-xl shadow-2xl p-4 animate-float border border-secondary-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <i data-lucide="check" class="w-5 h-5 text-green-600"></i>
+              </div>
+              <span class="text-sm font-semibold text-secondary-800">Kép kiválasztva!</span>
+            </div>
+          </div>
+          <div class="hidden md:block absolute -left-12 bottom-1/4 bg-white rounded-xl shadow-2xl p-4 animate-float animation-delay-400 border border-secondary-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                <i data-lucide="credit-card" class="w-5 h-5 text-primary-600"></i>
+              </div>
+              <span class="text-sm font-semibold text-secondary-800">Fizetés sikeres</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -130,54 +239,54 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Feature cards - placeholder -->
-        <div class="card" data-aos="fade-up" data-aos-delay="0">
-          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-            <span class="text-2xl">📸</span>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Feature cards -->
+        <div class="feature-card group" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="camera" class="w-7 h-7 text-primary-600"></i>
           </div>
-          <h3 class="text-xl font-display font-semibold mb-2">Online képválasztás</h3>
-          <p class="text-secondary-600">Szülők egyszerűen választhatnak képet otthonról, bármilyen eszközről.</p>
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-3">Online képválasztás</h3>
+          <p class="text-secondary-600 leading-relaxed">Szülők egyszerűen választhatnak képet otthonról, bármilyen eszközről.</p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-            <span class="text-2xl">🎨</span>
+        <div class="feature-card group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="palette" class="w-7 h-7 text-primary-600"></i>
           </div>
-          <h3 class="text-xl font-display font-semibold mb-2">Sablon szerkesztő</h3>
-          <p class="text-secondary-600">Tervezz egyedi tablókat a beépített drag-and-drop szerkesztővel.</p>
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-3">Sablon szerkesztő</h3>
+          <p class="text-secondary-600 leading-relaxed">Tervezz egyedi tablókat a beépített drag-and-drop szerkesztővel.</p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-            <span class="text-2xl">📊</span>
+        <div class="feature-card group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="bar-chart-2" class="w-7 h-7 text-primary-600"></i>
           </div>
-          <h3 class="text-xl font-display font-semibold mb-2">Részletes statisztika</h3>
-          <p class="text-secondary-600">Kövesd nyomon a rendeléseket, bevételeket valós időben.</p>
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-3">Részletes statisztika</h3>
+          <p class="text-secondary-600 leading-relaxed">Kövesd nyomon a rendeléseket, bevételeket valós időben.</p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-            <span class="text-2xl">✉️</span>
+        <div class="feature-card group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="mail" class="w-7 h-7 text-primary-600"></i>
           </div>
-          <h3 class="text-xl font-display font-semibold mb-2">Automatikus értesítések</h3>
-          <p class="text-secondary-600">Email és SMS emlékeztetők a szülőknek automatikusan.</p>
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-3">Automatikus értesítések</h3>
+          <p class="text-secondary-600 leading-relaxed">Email és SMS emlékeztetők a szülőknek automatikusan.</p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="400">
-          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-            <span class="text-2xl">💳</span>
+        <div class="feature-card group" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="credit-card" class="w-7 h-7 text-primary-600"></i>
           </div>
-          <h3 class="text-xl font-display font-semibold mb-2">Online fizetés</h3>
-          <p class="text-secondary-600">Stripe integráció - fogadj fizetéseket közvetlenül az appban.</p>
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-3">Online fizetés</h3>
+          <p class="text-secondary-600 leading-relaxed">Stripe integráció - fogadj fizetéseket közvetlenül az appban.</p>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="500">
-          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-            <span class="text-2xl">📱</span>
+        <div class="feature-card group" data-aos="fade-up" data-aos-delay="500">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="smartphone" class="w-7 h-7 text-primary-600"></i>
           </div>
-          <h3 class="text-xl font-display font-semibold mb-2">Mobil optimalizált</h3>
-          <p class="text-secondary-600">Tökéletesen működik telefonon, tableten, számítógépen.</p>
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-3">Mobil optimalizált</h3>
+          <p class="text-secondary-600 leading-relaxed">Tökéletesen működik telefonon, tableten, számítógépen.</p>
         </div>
       </div>
     </div>
@@ -188,59 +297,140 @@
        ============================================ -->
   <section id="arak" class="section bg-secondary-50">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-12">
         <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
           Egyszerű, átlátható árazás
         </h2>
-        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-lg text-secondary-600 mb-8" data-aos="fade-up" data-aos-delay="100">
           Válaszd ki a számodra megfelelő csomagot. Bármikor válthatsz.
         </p>
+
+        <!-- Billing Toggle -->
+        <div class="inline-flex items-center justify-center bg-secondary-100 rounded-full p-1.5" data-aos="fade-up" data-aos-delay="150">
+          <button type="button" id="btn-monthly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-white text-secondary-900 shadow-md">
+            Havi
+          </button>
+          <button type="button" id="btn-yearly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 text-secondary-500 hover:text-secondary-700">
+            Éves
+            <span class="ml-1.5 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">-17%</span>
+          </button>
+          <input type="checkbox" id="billing-toggle" class="sr-only">
+        </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <!-- Pricing cards - placeholder -->
-        <div class="card text-center" data-aos="fade-up" data-aos-delay="0">
-          <h3 class="text-xl font-display font-semibold mb-2">Alap</h3>
-          <div class="text-4xl font-bold text-secondary-900 mb-4">
-            9.900 <span class="text-lg font-normal text-secondary-500">Ft/hó</span>
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-start">
+        <!-- Alap csomag -->
+        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-2">Alap</h3>
+          <p class="text-secondary-500 text-sm mb-6">Kisebb fotósoknak</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-secondary-900 price-monthly">4.990</span>
+            <span class="text-4xl font-bold text-secondary-900 price-yearly hidden">49.900</span>
+            <span class="text-lg font-medium text-secondary-500 price-suffix-monthly">Ft/hó</span>
+            <span class="text-lg font-medium text-secondary-500 price-suffix-yearly hidden">Ft/év</span>
           </div>
-          <ul class="text-secondary-600 space-y-3 mb-8 text-left">
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 5 projekt/hónap</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Online képválasztás</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Email támogatás</li>
+          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">4.158 Ft/hó-val egyenértékű</p>
+          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>20 GB tárhely</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Max. 3 osztály</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Online képválasztás</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Email támogatás</span>
+            </li>
           </ul>
-          <a href="/register" class="btn-secondary w-full">Kezdés</a>
+          <a href="/register" class="btn-secondary w-full justify-center">Kezdés</a>
         </div>
 
-        <div class="card text-center border-2 border-primary-500 relative" data-aos="fade-up" data-aos-delay="100">
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Népszerű
+        <!-- Iskola csomag (Népszerű) -->
+        <div class="pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg">
+            Legnépszerűbb
           </div>
-          <h3 class="text-xl font-display font-semibold mb-2">Profi</h3>
-          <div class="text-4xl font-bold text-secondary-900 mb-4">
-            19.900 <span class="text-lg font-normal text-secondary-500">Ft/hó</span>
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-2 mt-2">Iskola</h3>
+          <p class="text-secondary-500 text-sm mb-6">Legtöbb fotósnak ideális</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-primary-600 price-monthly">14.990</span>
+            <span class="text-4xl font-bold text-primary-600 price-yearly hidden">149.900</span>
+            <span class="text-lg font-medium text-secondary-500 price-suffix-monthly">Ft/hó</span>
+            <span class="text-lg font-medium text-secondary-500 price-suffix-yearly hidden">Ft/év</span>
           </div>
-          <ul class="text-secondary-600 space-y-3 mb-8 text-left">
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Korlátlan projekt</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Online fizetés</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Egyedi domain</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Prioritás támogatás</li>
+          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">12.492 Ft/hó-val egyenértékű</p>
+          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>100 GB tárhely</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Max. 20 osztály</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Saját subdomain</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Online fizetés (Stripe)</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Prioritás támogatás</span>
+            </li>
           </ul>
-          <a href="/register" class="btn-primary w-full">Kezdés</a>
+          <a href="/register" class="btn-primary w-full justify-center shadow-lg shadow-primary-500/30">Kezdés</a>
         </div>
 
-        <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-display font-semibold mb-2">Stúdió</h3>
-          <div class="text-4xl font-bold text-secondary-900 mb-4">
-            39.900 <span class="text-lg font-normal text-secondary-500">Ft/hó</span>
+        <!-- Stúdió csomag -->
+        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-display font-bold text-secondary-900 mb-2">Stúdió</h3>
+          <p class="text-secondary-500 text-sm mb-6">Nagyobb stúdióknak</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold text-secondary-900 price-monthly">29.990</span>
+            <span class="text-4xl font-bold text-secondary-900 price-yearly hidden">299.900</span>
+            <span class="text-lg font-medium text-secondary-500 price-suffix-monthly">Ft/hó</span>
+            <span class="text-lg font-medium text-secondary-500 price-suffix-yearly hidden">Ft/év</span>
           </div>
-          <ul class="text-secondary-600 space-y-3 mb-8 text-left">
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Minden Profi funkcióval</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> White-label (saját márka)</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> API hozzáférés</li>
-            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dedikált support</li>
+          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">24.992 Ft/hó-val egyenértékű</p>
+          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>500 GB tárhely</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Korlátlan osztály</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Custom domain</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>White-label (saját márka)</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>API hozzáférés</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Dedikált support</span>
+            </li>
           </ul>
-          <a href="/register" class="btn-secondary w-full">Kezdés</a>
+          <a href="/register" class="btn-secondary w-full justify-center">Kezdés</a>
         </div>
       </div>
     </div>
@@ -260,30 +450,131 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-8">
-        <!-- Steps - placeholder -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="0">
-          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-          <h3 class="font-display font-semibold mb-2">Regisztráció</h3>
-          <p class="text-secondary-600 text-sm">Hozd létre fiókodat pár perc alatt.</p>
+      <div class="grid md:grid-cols-4 gap-6 lg:gap-8 relative">
+        <!-- Connection line (hidden on mobile) -->
+        <div class="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-200"></div>
+
+        <!-- Step 1 -->
+        <div class="text-center relative" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-primary-500/30 relative z-10">
+            1
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">Regisztráció</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Hozd létre fiókodat pár perc alatt, ingyenesen.</p>
         </div>
 
-        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-          <h3 class="font-display font-semibold mb-2">Projekt létrehozás</h3>
-          <p class="text-secondary-600 text-sm">Add hozzá az iskolát és töltsd fel a képeket.</p>
+        <!-- Step 2 -->
+        <div class="text-center relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-primary-500/30 relative z-10">
+            2
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">Projekt létrehozás</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Add hozzá az iskolát és töltsd fel a képeket.</p>
         </div>
 
-        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-          <h3 class="font-display font-semibold mb-2">Megosztás</h3>
-          <p class="text-secondary-600 text-sm">Küld ki a linket a szülőknek.</p>
+        <!-- Step 3 -->
+        <div class="text-center relative" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-primary-500/30 relative z-10">
+            3
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">Megosztás</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Küldd ki a linket a szülőknek emailben vagy SMS-ben.</p>
         </div>
 
-        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
-          <h3 class="font-display font-semibold mb-2">Rendelés</h3>
-          <p class="text-secondary-600 text-sm">Szülők választanak, fizetnek - te meg dolgozol.</p>
+        <!-- Step 4 -->
+        <div class="text-center relative" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-5 shadow-lg shadow-primary-500/30 relative z-10">
+            4
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">Rendelés</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Szülők választanak, fizetnek - te pedig dolgozol.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS SECTION
+       ============================================ -->
+  <section id="velemenyek" class="section bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Amit ügyfeleink mondanak
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Csatlakozz a több száz elégedett fotóshoz, akik már használják a TablóStúdiót.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-white rounded-2xl shadow-lg p-8 border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex items-center gap-0.5 mb-5">
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-secondary-700 mb-6 leading-relaxed italic">
+            "Végre egy rendszer, ami valóban egyszerű! A szülők imádják, és nekem rengeteg időt spórol. Már nem kell telefonon egyeztetni minden képválasztást."
+          </p>
+          <div class="flex items-center gap-4 pt-4 border-t border-secondary-100">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold">KA</span>
+            </div>
+            <div>
+              <div class="font-bold text-secondary-900">Kovács Anna</div>
+              <div class="text-sm text-secondary-500">Fotós, Budapest</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-white rounded-2xl shadow-lg p-8 border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-0.5 mb-5">
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-secondary-700 mb-6 leading-relaxed italic">
+            "3 éve használom és nem tudnám már nélküle elképzelni a munkám. Az online fizetés bevezetése óta 40%-kal nőtt a bevételem!"
+          </p>
+          <div class="flex items-center gap-4 pt-4 border-t border-secondary-100">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold">NP</span>
+            </div>
+            <div>
+              <div class="font-bold text-secondary-900">Nagy Péter</div>
+              <div class="text-sm text-secondary-500">FotóStúdió Kft., Debrecen</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-white rounded-2xl shadow-lg p-8 border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-0.5 mb-5">
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-secondary-700 mb-6 leading-relaxed italic">
+            "A támogatás fantasztikus - mindig gyorsan és segítőkészen válaszolnak. A sablon szerkesztő pedig egyszerűen zseniális!"
+          </p>
+          <div class="flex items-center gap-4 pt-4 border-t border-secondary-100">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold">TM</span>
+            </div>
+            <div>
+              <div class="font-bold text-secondary-900">Tóth Mária</div>
+              <div class="text-sm text-secondary-500">Iskolai fotós, Szeged</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -300,46 +591,248 @@
         </h2>
       </div>
 
-      <div class="max-w-3xl mx-auto space-y-4">
-        <!-- FAQ items - placeholder -->
-        <div class="card" data-aos="fade-up">
-          <h3 class="font-display font-semibold text-lg mb-2">Kell hozzá technikai tudás?</h3>
-          <p class="text-secondary-600">Nem! A rendszer egyszerűen használható, és ha mégis elakadsz, segítünk.</p>
+      <div class="max-w-3xl mx-auto space-y-3">
+        <!-- FAQ Accordion -->
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Kell hozzá technikai tudás?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Nem! A rendszer egyszerűen használható, még ha nem is vagy jártas a technológiában. Az intuitív felületet kifejezetten fotósoknak terveztük, és ha mégis elakadnál, részletes útmutatóink és ügyfélszolgálatunk mindig segít.</p>
+          </div>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="font-display font-semibold text-lg mb-2">Hogyan működik a fizetés?</h3>
-          <p class="text-secondary-600">Stripe-on keresztül biztonságosan. A pénz közvetlenül a te számládra érkezik.</p>
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="50">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Hogyan működik az online fizetés?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>A Stripe fizetési rendszert használjuk, ami a világ egyik legbiztonságosabb online fizetési megoldása. A szülők bankkártyával fizethetnek, és a pénz közvetlenül a te Stripe számládra érkezik. Te döntöd el, mikor utalsz a saját bankszámládra.</p>
+          </div>
         </div>
 
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="font-display font-semibold text-lg mb-2">Lehet próbálni ingyenesen?</h3>
-          <p class="text-secondary-600">Igen! 14 napos ingyenes próbaidőszak, bankkártya nélkül.</p>
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Lehet próbálni ingyenesen?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Igen! 14 napos ingyenes próbaidőszakot kínálunk, amihez nem kell bankkártya. Ezalatt az összes funkciót kipróbálhatod, és csak akkor fizetsz, ha elégedett vagy a rendszerrel.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="150">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Milyen formátumokban exportálhatom a tablókat?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>A kész tablókat exportálhatod nagy felbontású JPG, PNG vagy nyomdakész PDF formátumban. A rendszer automatikusan optimalizálja a képminőséget a nyomtatáshoz szükséges felbontásra.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="200">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">A szülők hogyan kapják meg a képválasztó linket?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>A rendszer automatikusan generál egy egyedi linket minden diákhoz. Ezt elküldheted emailben közvetlenül a rendszerből, vagy egyszerűen átadhatod az iskolának, akik továbbítják a szülőknek. Minden link egyedi és védett.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="250">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Bármikor lemondhatom az előfizetést?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Igen, nincsen hosszú távú elkötelezettség. Havi előfizetés esetén bármikor lemondhatsz, és a lemondás a számlázási időszak végén lép érvénybe. Adataidat exportálhatod, mielőtt távozol.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       CONTACT / CTA SECTION
+       CONTACT SECTION
        ============================================ -->
-  <section id="kapcsolat" class="section bg-primary-600">
+  <section id="kapcsolat" class="section bg-white">
     <div class="container-custom">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4" data-aos="fade-up">
-          Készen állsz?
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Lépj kapcsolatba velünk
         </h2>
-        <p class="text-lg text-primary-100 mb-8" data-aos="fade-up" data-aos-delay="100">
-          Kezdd el az ingyenes próbaidőszakot még ma!
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Kérdésed van? Írj nekünk és hamarosan válaszolunk!
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <!-- Contact Info -->
+        <div data-aos="fade-up" data-aos-delay="0">
+          <h3 class="text-xl font-display font-semibold text-secondary-900 mb-6">Elérhetőségek</h3>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-5 h-5 text-primary-600"></i>
+              </div>
+              <div>
+                <div class="font-medium text-secondary-900">Email</div>
+                <a href="mailto:info@tablostudio.hu" class="text-primary-600 hover:text-primary-700">info@tablostudio.hu</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5 text-primary-600"></i>
+              </div>
+              <div>
+                <div class="font-medium text-secondary-900">Telefon</div>
+                <a href="tel:+36301234567" class="text-primary-600 hover:text-primary-700">+36 30 123 4567</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="clock" class="w-5 h-5 text-primary-600"></i>
+              </div>
+              <div>
+                <div class="font-medium text-secondary-900">Munkaidő</div>
+                <div class="text-secondary-600">Hétfő - Péntek: 9:00 - 17:00</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i data-lucide="message-circle" class="w-5 h-5 text-primary-600"></i>
+              </div>
+              <div>
+                <div class="font-medium text-secondary-900">Válaszidő</div>
+                <div class="text-secondary-600">Általában 24 órán belül válaszolunk</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <form id="contact-form" class="bg-white rounded-2xl shadow-lg border border-secondary-100 p-6 md:p-8 space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-secondary-700 mb-2">Név *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-4 py-3.5 bg-secondary-50 border-2 border-secondary-200 rounded-xl focus:ring-0 focus:border-primary-500 focus:bg-white transition-all duration-200 placeholder-secondary-400"
+                placeholder="Teljes neved"
+              >
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold text-secondary-700 mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3.5 bg-secondary-50 border-2 border-secondary-200 rounded-xl focus:ring-0 focus:border-primary-500 focus:bg-white transition-all duration-200 placeholder-secondary-400"
+                placeholder="email@pelda.hu"
+              >
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-semibold text-secondary-700 mb-2">Tárgy</label>
+              <select
+                id="subject"
+                name="subject"
+                class="w-full px-4 py-3.5 bg-secondary-50 border-2 border-secondary-200 rounded-xl focus:ring-0 focus:border-primary-500 focus:bg-white transition-all duration-200 text-secondary-700"
+              >
+                <option value="">Válassz témát...</option>
+                <option value="general">Általános kérdés</option>
+                <option value="pricing">Árakkal kapcsolatos</option>
+                <option value="demo">Demo kérés</option>
+                <option value="support">Technikai segítség</option>
+                <option value="partnership">Partnerség</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-secondary-700 mb-2">Üzenet *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                class="w-full px-4 py-3.5 bg-secondary-50 border-2 border-secondary-200 rounded-xl focus:ring-0 focus:border-primary-500 focus:bg-white transition-all duration-200 resize-none placeholder-secondary-400"
+                placeholder="Írd le, miben segíthetünk..."
+              ></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                required
+                class="mt-1 w-5 h-5 text-primary-600 border-2 border-secondary-300 rounded focus:ring-primary-500 focus:ring-offset-0"
+              >
+              <label for="privacy" class="text-sm text-secondary-600 leading-relaxed">
+                Elfogadom az <a href="/adatkezeles.html" class="text-primary-600 font-medium hover:underline">Adatkezelési tájékoztatóban</a> foglaltakat. *
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary w-full justify-center py-4 text-base shadow-lg shadow-primary-500/30 hover:shadow-xl hover:shadow-primary-500/40">
+              Üzenet küldése
+              <i data-lucide="send" class="w-5 h-5 ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section id="cta" class="section bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="container-custom relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" data-aos="fade-up">
+          Készen állsz a hatékonyabb munkára?
+        </h2>
+        <p class="text-lg md:text-xl text-primary-100 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Kezdd el az ingyenes 14 napos próbaidőszakot még ma - bankkártya nélkül!
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
-          <a href="/register" class="btn-secondary text-lg px-8 py-4 bg-white hover:bg-primary-50">
-            Regisztráció ingyenes próbával
-          </a>
-          <a href="mailto:info@tablostudio.hu" class="text-white hover:text-primary-200 font-medium transition-colors">
-            Vagy írj nekünk →
+          <a href="/register" class="btn-accent text-lg px-10 py-5 shadow-2xl shadow-accent-500/40 hover:shadow-accent-500/50 hover:scale-105 transition-all duration-300">
+            Ingyenes próba indítása
+            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
           </a>
         </div>
+        <p class="mt-6 text-primary-200 text-sm" data-aos="fade-up" data-aos-delay="300">
+          Nem kell bankkártya - 14 nap ingyenes - Bármikor lemondható
+        </p>
       </div>
     </div>
   </section>
@@ -347,50 +840,88 @@
   <!-- ============================================
        FOOTER
        ============================================ -->
-  <footer class="bg-secondary-900 text-secondary-300 py-16">
+  <footer class="bg-secondary-900 text-secondary-400">
     <div class="container-custom">
-      <div class="grid md:grid-cols-4 gap-8 mb-12">
-        <div>
-          <span class="text-2xl font-display font-bold text-white">TablóStúdió</span>
-          <p class="mt-4 text-sm">Modern iskolai tablófotó rendszer fotósoknak.</p>
+      <!-- Main footer content -->
+      <div class="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <!-- Brand -->
+        <div class="md:col-span-2 lg:col-span-1">
+          <a href="/" class="inline-block">
+            <span class="text-2xl font-display font-bold text-white">TablóStúdió</span>
+          </a>
+          <p class="mt-4 text-sm leading-relaxed max-w-xs">
+            Modern iskolai tablófotó rendszer fotósoknak. Automatizáld a munkádat, adj profi élményt ügyfeleidnek.
+          </p>
+          <!-- Social links placeholder -->
+          <div class="flex items-center gap-3 mt-6">
+            <a href="#" class="w-10 h-10 rounded-full bg-secondary-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-200">
+              <i data-lucide="facebook" class="w-5 h-5 text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-secondary-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-200">
+              <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+            </a>
+          </div>
         </div>
 
+        <!-- Termék -->
         <div>
-          <h4 class="font-semibold text-white mb-4">Termék</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#funkciok" class="hover:text-white transition-colors">Funkciók</a></li>
-            <li><a href="#arak" class="hover:text-white transition-colors">Árak</a></li>
-            <li><a href="#gyik" class="hover:text-white transition-colors">GYIK</a></li>
+          <h4 class="font-display font-bold text-white mb-5">Termék</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#funkciok" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Funkciók</a></li>
+            <li><a href="#arak" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Árak</a></li>
+            <li><a href="#velemenyek" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Vélemények</a></li>
+            <li><a href="#gyik" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">GYIK</a></li>
           </ul>
         </div>
 
+        <!-- Cég -->
         <div>
-          <h4 class="font-semibold text-white mb-4">Cég</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="/impresszum" class="hover:text-white transition-colors">Impresszum</a></li>
-            <li><a href="/adatkezeles" class="hover:text-white transition-colors">Adatkezelési tájékoztató</a></li>
-            <li><a href="/aszf" class="hover:text-white transition-colors">ÁSZF</a></li>
+          <h4 class="font-display font-bold text-white mb-5">Cég</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/impresszum.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Impresszum</a></li>
+            <li><a href="/adatkezeles.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Adatkezelési tájékoztató</a></li>
+            <li><a href="/aszf.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">ÁSZF</a></li>
           </ul>
         </div>
 
+        <!-- Kapcsolat -->
         <div>
-          <h4 class="font-semibold text-white mb-4">Kapcsolat</h4>
-          <ul class="space-y-2 text-sm">
-            <li>info@tablostudio.hu</li>
-            <li><a href="#kapcsolat" class="hover:text-white transition-colors">Írj nekünk</a></li>
+          <h4 class="font-display font-bold text-white mb-5">Kapcsolat</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-primary-400"></i>
+              <a href="mailto:info@tablostudio.hu" class="hover:text-white transition-colors">info@tablostudio.hu</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-primary-400"></i>
+              <a href="tel:+36301234567" class="hover:text-white transition-colors">+36 30 123 4567</a>
+            </li>
+            <li class="mt-4">
+              <a href="#kapcsolat" class="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium transition-colors">
+                Írj nekünk
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div class="border-t border-secondary-800 pt-8 text-center text-sm">
-        <p>&copy; 2024 TablóStúdió. Minden jog fenntartva.</p>
+      <!-- Bottom bar -->
+      <div class="border-t border-secondary-800 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <p>&copy; 2025 TablóStúdió. Minden jog fenntartva.</p>
+        <p class="text-secondary-500">Készült Magyarországon, fotósoknak.</p>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
     // Initialize AOS
     AOS.init({
       duration: 600,
@@ -417,10 +948,127 @@
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        header.classList.add('shadow-md');
+        header.classList.add('shadow-md', 'bg-white/95');
       } else {
-        header.classList.remove('shadow-md');
+        header.classList.remove('shadow-md', 'bg-white/95');
       }
+    });
+
+    // Billing Toggle (Monthly/Yearly) - new button design
+    const billingToggle = document.getElementById('billing-toggle');
+    const btnMonthly = document.getElementById('btn-monthly');
+    const btnYearly = document.getElementById('btn-yearly');
+
+    function updatePricing(isYearly) {
+      billingToggle.checked = isYearly;
+
+      // Update button styles
+      if (isYearly) {
+        btnMonthly.classList.remove('bg-white', 'text-secondary-900', 'shadow-md');
+        btnMonthly.classList.add('text-secondary-500');
+        btnYearly.classList.add('bg-white', 'text-secondary-900', 'shadow-md');
+        btnYearly.classList.remove('text-secondary-500');
+      } else {
+        btnMonthly.classList.add('bg-white', 'text-secondary-900', 'shadow-md');
+        btnMonthly.classList.remove('text-secondary-500');
+        btnYearly.classList.remove('bg-white', 'text-secondary-900', 'shadow-md');
+        btnYearly.classList.add('text-secondary-500');
+      }
+
+      // Toggle price visibility
+      document.querySelectorAll('.price-monthly').forEach(el => el.classList.toggle('hidden', isYearly));
+      document.querySelectorAll('.price-yearly').forEach(el => el.classList.toggle('hidden', !isYearly));
+      document.querySelectorAll('.price-suffix-monthly').forEach(el => el.classList.toggle('hidden', isYearly));
+      document.querySelectorAll('.price-suffix-yearly').forEach(el => el.classList.toggle('hidden', !isYearly));
+      document.querySelectorAll('.price-note-monthly').forEach(el => el.classList.toggle('hidden', isYearly));
+      document.querySelectorAll('.price-note-yearly').forEach(el => el.classList.toggle('hidden', !isYearly));
+    }
+
+    btnMonthly.addEventListener('click', () => updatePricing(false));
+    btnYearly.addEventListener('click', () => updatePricing(true));
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+
+      question.addEventListener('click', () => {
+        // Close other items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.querySelector('.faq-answer').classList.add('hidden');
+            otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+            otherItem.classList.remove('active');
+          }
+        });
+
+        // Toggle current item
+        const isOpening = answer.classList.contains('hidden');
+        answer.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+        item.classList.toggle('active', isOpening);
+      });
+    });
+
+    // Counter Animation with GSAP
+    gsap.registerPlugin(ScrollTrigger);
+
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const target = parseInt(counter.dataset.target, 10);
+      let currentValue = { val: 0 };
+
+      gsap.to(currentValue, {
+        val: target,
+        duration: 2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: counter,
+          start: 'top 80%',
+          once: true,
+        },
+        onUpdate: function() {
+          counter.textContent = Math.ceil(currentValue.val).toLocaleString('hu-HU');
+        }
+      });
+    });
+
+    // Hero Parallax Effect
+    gsap.to('.hero-bg', {
+      yPercent: 30,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+
+    // Contact Form (basic handler - prevent default)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Show success message (in production, send to backend)
+        alert('Köszönjük üzeneted! Hamarosan felvesszük veled a kapcsolatot.');
+        contactForm.reset();
+      });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
     });
   </script>
 </body>
