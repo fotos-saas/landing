@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TablóStúdió - Modern iskolai tablófotó rendszer fotósoknak. Egyszerű képválasztás, online galéria, automatikus retusálás.">
+  <meta name="keywords" content="tablófotó, iskolai fotó, képválasztó, fotós szoftver, osztálykép, ballagás">
+  <meta name="author" content="TablóStúdió">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tablostudio.hu/">
+  <meta property="og:title" content="TablóStúdió - Iskolai tablófotó rendszer">
+  <meta property="og:description" content="Modern iskolai tablófotó rendszer fotósoknak. Egyszerű képválasztás, online galéria.">
+  <meta property="og:image" content="https://tablostudio.hu/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tablostudio.hu/">
+  <meta property="twitter:title" content="TablóStúdió - Iskolai tablófotó rendszer">
+  <meta property="twitter:description" content="Modern iskolai tablófotó rendszer fotósoknak.">
+
+  <title>TablóStúdió - Iskolai tablófotó rendszer fotósoknak</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-secondary-100">
+    <nav class="container-custom">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2">
+          <span class="text-2xl font-display font-bold gradient-text">TablóStúdió</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#funkciok" class="text-secondary-600 hover:text-primary-600 transition-colors">Funkciók</a>
+          <a href="#arak" class="text-secondary-600 hover:text-primary-600 transition-colors">Árak</a>
+          <a href="#hogyan-mukodik" class="text-secondary-600 hover:text-primary-600 transition-colors">Hogyan működik</a>
+          <a href="#gyik" class="text-secondary-600 hover:text-primary-600 transition-colors">GYIK</a>
+          <a href="#kapcsolat" class="text-secondary-600 hover:text-primary-600 transition-colors">Kapcsolat</a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="/login" class="text-secondary-600 hover:text-primary-600 font-medium transition-colors">Bejelentkezés</a>
+          <a href="/register" class="btn-primary">Regisztráció</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-secondary-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-secondary-100">
+      <div class="container-custom py-4 space-y-4">
+        <a href="#funkciok" class="block text-secondary-600 hover:text-primary-600">Funkciók</a>
+        <a href="#arak" class="block text-secondary-600 hover:text-primary-600">Árak</a>
+        <a href="#hogyan-mukodik" class="block text-secondary-600 hover:text-primary-600">Hogyan működik</a>
+        <a href="#gyik" class="block text-secondary-600 hover:text-primary-600">GYIK</a>
+        <a href="#kapcsolat" class="block text-secondary-600 hover:text-primary-600">Kapcsolat</a>
+        <hr class="border-secondary-200">
+        <a href="/login" class="block text-secondary-600 font-medium">Bejelentkezés</a>
+        <a href="/register" class="btn-primary w-full text-center">Regisztráció</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section id="hero" class="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-secondary-900 mb-6" data-aos="fade-up">
+          Iskolai tablófotózás
+          <span class="gradient-text">egyszerűen</span>
+        </h1>
+        <p class="text-lg md:text-xl text-secondary-600 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Modern képválasztó rendszer fotósoknak. Automatizált workflow,
+          online galéria, egyszerű képválasztás a szülőknek.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="/register" class="btn-primary text-lg px-8 py-4">
+            Ingyenes próba
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <a href="#hogyan-mukodik" class="btn-secondary text-lg px-8 py-4">
+            Hogyan működik?
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image Placeholder -->
+      <div class="mt-16 max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <div class="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl shadow-2xl aspect-video flex items-center justify-center">
+          <p class="text-secondary-400 text-lg">[ Hero kép / Screenshot helye ]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FEATURES SECTION
+       ============================================ -->
+  <section id="funkciok" class="section bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Minden ami kell a sikeres tablófotózáshoz
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Automatizáld a munkafolyamataidat és adj profi élményt ügyfeleidnek.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature cards - placeholder -->
+        <div class="card" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">📸</span>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-2">Online képválasztás</h3>
+          <p class="text-secondary-600">Szülők egyszerűen választhatnak képet otthonról, bármilyen eszközről.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">🎨</span>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-2">Sablon szerkesztő</h3>
+          <p class="text-secondary-600">Tervezz egyedi tablókat a beépített drag-and-drop szerkesztővel.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">📊</span>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-2">Részletes statisztika</h3>
+          <p class="text-secondary-600">Kövesd nyomon a rendeléseket, bevételeket valós időben.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">✉️</span>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-2">Automatikus értesítések</h3>
+          <p class="text-secondary-600">Email és SMS emlékeztetők a szülőknek automatikusan.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">💳</span>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-2">Online fizetés</h3>
+          <p class="text-secondary-600">Stripe integráció - fogadj fizetéseket közvetlenül az appban.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="500">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">📱</span>
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-2">Mobil optimalizált</h3>
+          <p class="text-secondary-600">Tökéletesen működik telefonon, tableten, számítógépen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRICING SECTION
+       ============================================ -->
+  <section id="arak" class="section bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Egyszerű, átlátható árazás
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Válaszd ki a számodra megfelelő csomagot. Bármikor válthatsz.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Pricing cards - placeholder -->
+        <div class="card text-center" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="text-xl font-display font-semibold mb-2">Alap</h3>
+          <div class="text-4xl font-bold text-secondary-900 mb-4">
+            9.900 <span class="text-lg font-normal text-secondary-500">Ft/hó</span>
+          </div>
+          <ul class="text-secondary-600 space-y-3 mb-8 text-left">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> 5 projekt/hónap</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Online képválasztás</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Email támogatás</li>
+          </ul>
+          <a href="/register" class="btn-secondary w-full">Kezdés</a>
+        </div>
+
+        <div class="card text-center border-2 border-primary-500 relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Népszerű
+          </div>
+          <h3 class="text-xl font-display font-semibold mb-2">Profi</h3>
+          <div class="text-4xl font-bold text-secondary-900 mb-4">
+            19.900 <span class="text-lg font-normal text-secondary-500">Ft/hó</span>
+          </div>
+          <ul class="text-secondary-600 space-y-3 mb-8 text-left">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Korlátlan projekt</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Online fizetés</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Egyedi domain</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Prioritás támogatás</li>
+          </ul>
+          <a href="/register" class="btn-primary w-full">Kezdés</a>
+        </div>
+
+        <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-display font-semibold mb-2">Stúdió</h3>
+          <div class="text-4xl font-bold text-secondary-900 mb-4">
+            39.900 <span class="text-lg font-normal text-secondary-500">Ft/hó</span>
+          </div>
+          <ul class="text-secondary-600 space-y-3 mb-8 text-left">
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Minden Profi funkcióval</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> White-label (saját márka)</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> API hozzáférés</li>
+            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dedikált support</li>
+          </ul>
+          <a href="/register" class="btn-secondary w-full">Kezdés</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HOW IT WORKS SECTION
+       ============================================ -->
+  <section id="hogyan-mukodik" class="section bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Hogyan működik?
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Egyszerű lépésekkel indulhatsz el.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Steps - placeholder -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-display font-semibold mb-2">Regisztráció</h3>
+          <p class="text-secondary-600 text-sm">Hozd létre fiókodat pár perc alatt.</p>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-display font-semibold mb-2">Projekt létrehozás</h3>
+          <p class="text-secondary-600 text-sm">Add hozzá az iskolát és töltsd fel a képeket.</p>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-display font-semibold mb-2">Megosztás</h3>
+          <p class="text-secondary-600 text-sm">Küld ki a linket a szülőknek.</p>
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-display font-semibold mb-2">Rendelés</h3>
+          <p class="text-secondary-600 text-sm">Szülők választanak, fizetnek - te meg dolgozol.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ SECTION
+       ============================================ -->
+  <section id="gyik" class="section bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Gyakran ismételt kérdések
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <!-- FAQ items - placeholder -->
+        <div class="card" data-aos="fade-up">
+          <h3 class="font-display font-semibold text-lg mb-2">Kell hozzá technikai tudás?</h3>
+          <p class="text-secondary-600">Nem! A rendszer egyszerűen használható, és ha mégis elakadsz, segítünk.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-display font-semibold text-lg mb-2">Hogyan működik a fizetés?</h3>
+          <p class="text-secondary-600">Stripe-on keresztül biztonságosan. A pénz közvetlenül a te számládra érkezik.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="font-display font-semibold text-lg mb-2">Lehet próbálni ingyenesen?</h3>
+          <p class="text-secondary-600">Igen! 14 napos ingyenes próbaidőszak, bankkártya nélkül.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT / CTA SECTION
+       ============================================ -->
+  <section id="kapcsolat" class="section bg-primary-600">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4" data-aos="fade-up">
+          Készen állsz?
+        </h2>
+        <p class="text-lg text-primary-100 mb-8" data-aos="fade-up" data-aos-delay="100">
+          Kezdd el az ingyenes próbaidőszakot még ma!
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="/register" class="btn-secondary text-lg px-8 py-4 bg-white hover:bg-primary-50">
+            Regisztráció ingyenes próbával
+          </a>
+          <a href="mailto:info@tablostudio.hu" class="text-white hover:text-primary-200 font-medium transition-colors">
+            Vagy írj nekünk →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="bg-secondary-900 text-secondary-300 py-16">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <span class="text-2xl font-display font-bold text-white">TablóStúdió</span>
+          <p class="mt-4 text-sm">Modern iskolai tablófotó rendszer fotósoknak.</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-4">Termék</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#funkciok" class="hover:text-white transition-colors">Funkciók</a></li>
+            <li><a href="#arak" class="hover:text-white transition-colors">Árak</a></li>
+            <li><a href="#gyik" class="hover:text-white transition-colors">GYIK</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-4">Cég</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/impresszum" class="hover:text-white transition-colors">Impresszum</a></li>
+            <li><a href="/adatkezeles" class="hover:text-white transition-colors">Adatkezelési tájékoztató</a></li>
+            <li><a href="/aszf" class="hover:text-white transition-colors">ÁSZF</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-white mb-4">Kapcsolat</h4>
+          <ul class="space-y-2 text-sm">
+            <li>info@tablostudio.hu</li>
+            <li><a href="#kapcsolat" class="hover:text-white transition-colors">Írj nekünk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-secondary-800 pt-8 text-center text-sm">
+        <p>&copy; 2024 TablóStúdió. Minden jog fenntartva.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out',
+      once: true,
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-md');
+      } else {
+        header.classList.remove('shadow-md');
+      }
+    });
+  </script>
+</body>
+</html>

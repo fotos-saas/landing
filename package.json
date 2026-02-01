@@ -1,0 +1,18 @@
+{
+  "name": "tablostudio-landing",
+  "version": "1.0.0",
+  "description": "TablóStúdió landing page",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch & npx live-server dist",
+    "build": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
+    "preview": "npx live-server dist"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "gsap": "^3.12.5"
+  }
+}
