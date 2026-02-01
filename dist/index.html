@@ -318,9 +318,9 @@
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-start">
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
         <!-- Alap csomag -->
-        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="0">
           <h3 class="text-xl font-display font-bold text-secondary-900 mb-2">Alap</h3>
           <p class="text-secondary-500 text-sm mb-6">Kisebb fotósoknak</p>
           <div class="mb-6">
@@ -331,7 +331,7 @@
           </div>
           <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">4.158 Ft/hó-val egyenértékű</p>
           <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
-          <ul class="space-y-4 mb-8">
+          <ul class="space-y-4 mb-8 flex-grow">
             <li class="flex items-center text-secondary-700">
               <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
               <span>20 GB tárhely</span>
@@ -346,14 +346,22 @@
             </li>
             <li class="flex items-center text-secondary-700">
               <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>Sablon szerkesztő</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>QR kódos megosztás</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
               <span>Email támogatás</span>
             </li>
           </ul>
-          <a href="/register" class="btn-secondary w-full justify-center">Kezdés</a>
+          <a href="/register" class="btn-secondary w-full justify-center mt-auto">Kezdés</a>
         </div>
 
         <!-- Iskola csomag (Népszerű) -->
-        <div class="pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4 flex flex-col" data-aos="fade-up" data-aos-delay="100">
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg">
             Legnépszerűbb
           </div>
@@ -367,7 +375,7 @@
           </div>
           <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">12.492 Ft/hó-val egyenértékű</p>
           <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
-          <ul class="space-y-4 mb-8">
+          <ul class="space-y-4 mb-8 flex-grow">
             <li class="flex items-center text-secondary-700">
               <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
               <span>100 GB tárhely</span>
@@ -386,14 +394,18 @@
             </li>
             <li class="flex items-center text-secondary-700">
               <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
+              <span>SMS értesítések</span>
+            </li>
+            <li class="flex items-center text-secondary-700">
+              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
               <span>Prioritás támogatás</span>
             </li>
           </ul>
-          <a href="/register" class="btn-primary w-full justify-center shadow-lg shadow-primary-500/30">Kezdés</a>
+          <a href="/register" class="btn-primary w-full justify-center shadow-lg shadow-primary-500/30 mt-auto">Kezdés</a>
         </div>
 
         <!-- Stúdió csomag -->
-        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
           <h3 class="text-xl font-display font-bold text-secondary-900 mb-2">Stúdió</h3>
           <p class="text-secondary-500 text-sm mb-6">Nagyobb stúdióknak</p>
           <div class="mb-6">
@@ -404,7 +416,7 @@
           </div>
           <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">24.992 Ft/hó-val egyenértékű</p>
           <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
-          <ul class="space-y-4 mb-8">
+          <ul class="space-y-4 mb-8 flex-grow">
             <li class="flex items-center text-secondary-700">
               <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
               <span>500 GB tárhely</span>
@@ -430,7 +442,7 @@
               <span>Dedikált support</span>
             </li>
           </ul>
-          <a href="/register" class="btn-secondary w-full justify-center">Kezdés</a>
+          <a href="/register" class="btn-secondary w-full justify-center mt-auto">Kezdés</a>
         </div>
       </div>
     </div>
