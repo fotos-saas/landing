@@ -1,5 +1,12 @@
 # TablóStúdió robots.txt
-# FEJLESZTÉS ALATT - ne indexelje semmilyen kereső
+# MEGJEGYZÉS: A HTML oldalakban noindex meta tag van amíg nem élesítjük.
+# Élesítéskor a HTML-ekből kell kivenni a noindex-et.
 
 User-agent: *
-Disallow: /
+Allow: /
+
+# Nem publikus útvonalak
+Disallow: /assets/
+Disallow: /404.html
+
+Sitemap: https://tablostudio.hu/sitemap.xml
