@@ -80,9 +80,61 @@
 </head>
 <body>
   <!-- ============================================
+       SEASONAL BANNER (countdown)
+       ============================================ -->
+  <div id="seasonal-banner" class="relative z-[70] bg-gradient-to-r from-accent-500 via-accent-600 to-orange-500 text-white" style="display:none;">
+    <div class="container-custom flex items-center justify-center gap-3 md:gap-6 py-2.5 text-sm md:text-base">
+      <div class="flex items-center gap-2 font-semibold">
+        <i data-lucide="flame" class="w-4 h-4 md:w-5 md:h-5"></i>
+        <span class="hidden sm:inline">Készülj a szezonra!</span>
+        <span class="font-bold">25% kedvezmény</span>
+        <span class="hidden md:inline">éves előfizetésre</span>
+      </div>
+      <div id="countdown" class="flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1 font-mono font-bold text-sm">
+        <span id="cd-days">00</span><span class="opacity-60">n</span>
+        <span class="opacity-40">:</span>
+        <span id="cd-hours">00</span><span class="opacity-60">ó</span>
+        <span class="opacity-40">:</span>
+        <span id="cd-mins">00</span><span class="opacity-60">p</span>
+        <span class="opacity-40">:</span>
+        <span id="cd-secs">00</span><span class="opacity-60">mp</span>
+      </div>
+      <a href="https://app.tablostudio.hu/register-app" class="hidden sm:inline-flex items-center px-3 py-1 bg-white text-accent-700 text-sm font-bold rounded-lg hover:bg-white/90 transition-colors">
+        Kihasználom
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1"></i>
+      </a>
+      <button id="banner-close" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-white/20 rounded transition-colors" aria-label="Bezárás">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================
+       STICKY CTA BAR
+       ============================================ -->
+  <div id="sticky-cta" class="fixed top-0 left-0 right-0 z-[60] bg-gradient-to-r from-primary-600 to-primary-700 text-white transform -translate-y-full transition-transform duration-300" style="display:none;">
+    <div class="container-custom flex items-center justify-between py-2.5">
+      <div class="flex items-center gap-2 text-sm font-medium">
+        <i data-lucide="rocket" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">Próbáld ki 14 napig ingyen - bankkártya nélkül!</span>
+        <span class="sm:hidden">14 nap ingyen!</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://app.tablostudio.hu/register-app" class="inline-flex items-center px-4 py-1.5 bg-accent-500 hover:bg-accent-600 text-white text-sm font-bold rounded-lg transition-colors duration-200">
+          Kezdés
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1.5"></i>
+        </a>
+        <button id="sticky-cta-close" class="p-1 hover:bg-white/20 rounded transition-colors duration-200" aria-label="Bezárás">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
        HEADER
        ============================================ -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-secondary-100">
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-secondary-100 transition-[top] duration-300">
     <nav class="container-custom">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
@@ -97,6 +149,7 @@
           <a href="#hogyan-mukodik" class="text-secondary-600 hover:text-primary-600 transition-colors">Hogyan működik</a>
           <a href="#gyik" class="text-secondary-600 hover:text-primary-600 transition-colors">GYIK</a>
           <a href="#kapcsolat" class="text-secondary-600 hover:text-primary-600 transition-colors">Kapcsolat</a>
+          <a href="/nyomdaknak.html" class="text-green-600 hover:text-green-700 font-medium transition-colors">Nyomdáknak</a>
         </div>
 
         <!-- CTA Buttons -->
@@ -125,6 +178,7 @@
         <a href="#hogyan-mukodik" class="block text-secondary-600 hover:text-primary-600">Hogyan működik</a>
         <a href="#gyik" class="block text-secondary-600 hover:text-primary-600">GYIK</a>
         <a href="#kapcsolat" class="block text-secondary-600 hover:text-primary-600">Kapcsolat</a>
+        <a href="/nyomdaknak.html" class="block text-green-600 hover:text-green-700 font-medium">Nyomdáknak</a>
         <hr class="border-secondary-200">
         <a href="https://app.tablostudio.hu/login" class="block text-secondary-600 font-medium">Bejelentkezés</a>
         <a href="https://app.tablostudio.hu/register-app" class="btn-primary w-full text-center">
@@ -177,19 +231,19 @@
         <div class="flex flex-wrap justify-center gap-8 md:gap-16 mt-12" data-aos="fade-up" data-aos-delay="250">
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-white">
-              <span class="counter" data-target="500">0</span>+
+              <span class="counter" data-target="44">0</span>+
             </div>
             <div class="text-primary-200 text-sm md:text-base mt-1">Elégedett iskola</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-white">
-              <span class="counter" data-target="10000">0</span>+
+              <span class="counter" data-target="874">0</span>+
             </div>
             <div class="text-primary-200 text-sm md:text-base mt-1">Elkészült tabló</div>
           </div>
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-white">
-              <span class="counter" data-target="50000">0</span>+
+              <span class="counter" data-target="4367">0</span>+
             </div>
             <div class="text-primary-200 text-sm md:text-base mt-1">Elégedett szülő</div>
           </div>
@@ -209,12 +263,123 @@
               <div class="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-green-500"></div>
             </div>
           </div>
-          <div class="relative bg-gradient-to-br from-secondary-50 to-secondary-100 rounded-b-2xl shadow-2xl aspect-video flex items-center justify-center border-4 border-t-0 border-secondary-900">
-            <!-- App Screenshot Placeholder -->
-            <div class="text-center p-8">
-              <i data-lucide="layout-dashboard" class="w-20 h-20 text-primary-400 mx-auto mb-4"></i>
-              <p class="text-secondary-600 text-xl font-semibold">TablóStúdió Dashboard</p>
-              <p class="text-secondary-400 text-sm mt-2">App screenshot helye</p>
+          <div class="relative bg-white rounded-b-2xl shadow-2xl aspect-video border-4 border-t-0 border-secondary-900 overflow-hidden">
+            <!-- Fake Dashboard UI -->
+            <div class="flex h-full" style="font-size: clamp(6px, 1vw, 12px);">
+              <!-- Sidebar -->
+              <div class="w-[15%] bg-primary-700 flex flex-col items-center py-[1.5em] gap-[1.2em] flex-shrink-0">
+                <div class="w-[2.5em] h-[2.5em] bg-white/20 rounded-[0.6em]"></div>
+                <div class="w-[2em] h-[2em] bg-white/30 rounded-[0.5em]"></div>
+                <div class="w-[2em] h-[2em] bg-white/15 rounded-[0.5em]"></div>
+                <div class="w-[2em] h-[2em] bg-white/15 rounded-[0.5em]"></div>
+                <div class="w-[2em] h-[2em] bg-white/15 rounded-[0.5em]"></div>
+                <div class="mt-auto w-[2em] h-[2em] bg-white/10 rounded-full"></div>
+              </div>
+              <!-- Main content -->
+              <div class="flex-1 bg-secondary-50 p-[1.5em] overflow-hidden">
+                <!-- Top bar -->
+                <div class="flex items-center justify-between mb-[1.2em]">
+                  <div class="flex items-center gap-[0.6em]">
+                    <div class="w-[8em] h-[1.4em] bg-secondary-300 rounded-[0.3em]"></div>
+                    <div class="w-[5em] h-[1.4em] bg-primary-100 text-primary-600 rounded-[0.3em]"></div>
+                  </div>
+                  <div class="flex items-center gap-[0.5em]">
+                    <div class="w-[6em] h-[1.6em] bg-primary-600 rounded-[0.4em]"></div>
+                    <div class="w-[1.6em] h-[1.6em] bg-secondary-200 rounded-full"></div>
+                  </div>
+                </div>
+                <!-- Stat cards row -->
+                <div class="grid grid-cols-4 gap-[0.8em] mb-[1.2em]">
+                  <div class="bg-white rounded-[0.6em] p-[0.8em] shadow-sm border border-secondary-100">
+                    <div class="w-[3em] h-[0.6em] bg-secondary-300 rounded mb-[0.5em]"></div>
+                    <div class="w-[4em] h-[1.2em] bg-primary-600 rounded-[0.3em] mb-[0.3em]"></div>
+                    <div class="w-[5em] h-[0.4em] bg-green-200 rounded"></div>
+                  </div>
+                  <div class="bg-white rounded-[0.6em] p-[0.8em] shadow-sm border border-secondary-100">
+                    <div class="w-[3em] h-[0.6em] bg-secondary-300 rounded mb-[0.5em]"></div>
+                    <div class="w-[3em] h-[1.2em] bg-green-500 rounded-[0.3em] mb-[0.3em]"></div>
+                    <div class="w-[4em] h-[0.4em] bg-green-200 rounded"></div>
+                  </div>
+                  <div class="bg-white rounded-[0.6em] p-[0.8em] shadow-sm border border-secondary-100">
+                    <div class="w-[3em] h-[0.6em] bg-secondary-300 rounded mb-[0.5em]"></div>
+                    <div class="w-[3.5em] h-[1.2em] bg-accent-500 rounded-[0.3em] mb-[0.3em]"></div>
+                    <div class="w-[4.5em] h-[0.4em] bg-accent-200 rounded"></div>
+                  </div>
+                  <div class="bg-white rounded-[0.6em] p-[0.8em] shadow-sm border border-secondary-100">
+                    <div class="w-[3em] h-[0.6em] bg-secondary-300 rounded mb-[0.5em]"></div>
+                    <div class="w-[2.5em] h-[1.2em] bg-purple-500 rounded-[0.3em] mb-[0.3em]"></div>
+                    <div class="w-[3.5em] h-[0.4em] bg-purple-200 rounded"></div>
+                  </div>
+                </div>
+                <!-- Content area: Photo grid + sidebar panel -->
+                <div class="flex gap-[0.8em]">
+                  <!-- Photo grid (gallery) -->
+                  <div class="flex-1 bg-white rounded-[0.6em] p-[0.8em] shadow-sm border border-secondary-100">
+                    <div class="flex items-center justify-between mb-[0.8em]">
+                      <div class="w-[6em] h-[0.8em] bg-secondary-400 rounded"></div>
+                      <div class="flex gap-[0.3em]">
+                        <div class="w-[3em] h-[1em] bg-secondary-100 rounded-[0.3em]"></div>
+                        <div class="w-[3em] h-[1em] bg-primary-100 rounded-[0.3em]"></div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-[0.5em]">
+                      <div class="aspect-square bg-gradient-to-br from-primary-200 to-primary-100 rounded-[0.4em] relative">
+                        <div class="absolute top-[0.2em] right-[0.2em] w-[1em] h-[1em] bg-green-500 rounded-full border-2 border-white"></div>
+                      </div>
+                      <div class="aspect-square bg-gradient-to-br from-blue-200 to-blue-100 rounded-[0.4em] relative">
+                        <div class="absolute top-[0.2em] right-[0.2em] w-[1em] h-[1em] bg-green-500 rounded-full border-2 border-white"></div>
+                      </div>
+                      <div class="aspect-square bg-gradient-to-br from-accent-200 to-accent-100 rounded-[0.4em]"></div>
+                      <div class="aspect-square bg-gradient-to-br from-pink-200 to-pink-100 rounded-[0.4em]"></div>
+                      <div class="aspect-square bg-gradient-to-br from-green-200 to-green-100 rounded-[0.4em] relative">
+                        <div class="absolute top-[0.2em] right-[0.2em] w-[1em] h-[1em] bg-green-500 rounded-full border-2 border-white"></div>
+                      </div>
+                      <div class="aspect-square bg-gradient-to-br from-purple-200 to-purple-100 rounded-[0.4em]"></div>
+                      <div class="aspect-square bg-gradient-to-br from-cyan-200 to-cyan-100 rounded-[0.4em]"></div>
+                      <div class="aspect-square bg-gradient-to-br from-rose-200 to-rose-100 rounded-[0.4em]"></div>
+                    </div>
+                  </div>
+                  <!-- Right panel: Student info -->
+                  <div class="w-[30%] flex flex-col gap-[0.8em] flex-shrink-0">
+                    <div class="bg-white rounded-[0.6em] p-[0.8em] shadow-sm border border-secondary-100">
+                      <div class="w-[3em] h-[3em] bg-gradient-to-br from-primary-400 to-primary-600 rounded-full mx-auto mb-[0.5em]"></div>
+                      <div class="w-[5em] h-[0.7em] bg-secondary-400 rounded mx-auto mb-[0.3em]"></div>
+                      <div class="w-[4em] h-[0.5em] bg-secondary-200 rounded mx-auto mb-[0.6em]"></div>
+                      <div class="flex items-center gap-[0.3em] justify-center">
+                        <div class="w-[1em] h-[1em] bg-green-100 rounded-full"></div>
+                        <div class="w-[4em] h-[0.5em] bg-green-300 rounded"></div>
+                      </div>
+                    </div>
+                    <div class="bg-white rounded-[0.6em] p-[0.8em] shadow-sm border border-secondary-100 flex-1">
+                      <div class="w-[5em] h-[0.6em] bg-secondary-300 rounded mb-[0.6em]"></div>
+                      <div class="space-y-[0.4em]">
+                        <div class="flex items-center gap-[0.3em]">
+                          <div class="w-[1em] h-[1em] bg-green-500 rounded-[0.2em]"></div>
+                          <div class="flex-1 h-[0.5em] bg-secondary-200 rounded"></div>
+                        </div>
+                        <div class="flex items-center gap-[0.3em]">
+                          <div class="w-[1em] h-[1em] bg-green-500 rounded-[0.2em]"></div>
+                          <div class="flex-1 h-[0.5em] bg-secondary-200 rounded"></div>
+                        </div>
+                        <div class="flex items-center gap-[0.3em]">
+                          <div class="w-[1em] h-[1em] bg-secondary-200 rounded-[0.2em]"></div>
+                          <div class="flex-1 h-[0.5em] bg-secondary-200 rounded"></div>
+                        </div>
+                        <div class="flex items-center gap-[0.3em]">
+                          <div class="w-[1em] h-[1em] bg-secondary-200 rounded-[0.2em]"></div>
+                          <div class="flex-1 h-[0.5em] bg-secondary-200 rounded"></div>
+                        </div>
+                      </div>
+                      <!-- Progress bar -->
+                      <div class="mt-[0.6em]">
+                        <div class="w-full h-[0.5em] bg-secondary-100 rounded-full overflow-hidden">
+                          <div class="w-[60%] h-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Floating elements -->
@@ -232,6 +397,14 @@
                 <i data-lucide="credit-card" class="w-5 h-5 text-primary-600"></i>
               </div>
               <span class="text-sm font-semibold text-secondary-800">Fizetés sikeres</span>
+            </div>
+          </div>
+          <div class="hidden lg:block absolute -right-8 bottom-1/6 bg-white rounded-xl shadow-2xl p-4 animate-float animation-delay-600 border border-secondary-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-accent-100 rounded-full flex items-center justify-center">
+                <i data-lucide="send" class="w-5 h-5 text-accent-600"></i>
+              </div>
+              <span class="text-sm font-semibold text-secondary-800">Nyomda küldve!</span>
             </div>
           </div>
         </div>
@@ -301,6 +474,142 @@
           </div>
           <h3 class="text-xl font-display font-bold text-secondary-900 mb-3">Mobil optimalizált</h3>
           <p class="text-secondary-600 leading-relaxed">Tökéletesen működik telefonon, tableten, számítógépen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHY CHOOSE US SECTION
+       ============================================ -->
+  <section id="miert-minket" class="section bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Miért választanak minket a fotósok?
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Konkrét számok, valódi megtakarítás.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <!-- Stat 1: Time saved -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 text-center border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="timer" class="w-8 h-8 text-primary-600"></i>
+          </div>
+          <div class="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+            <span class="counter" data-target="35">0</span> <span class="text-2xl">perc</span> <span class="text-green-500 text-2xl">&#8594; 0</span>
+          </div>
+          <p class="text-secondary-600 font-medium">Admin idő projektenként</p>
+          <p class="text-secondary-400 text-sm mt-2">Nincs több telefon, email, papír</p>
+        </div>
+
+        <!-- Stat 2: ROI -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 text-center border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-50 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="trending-up" class="w-8 h-8 text-green-600"></i>
+          </div>
+          <div class="text-4xl md:text-5xl font-bold text-green-600 mb-2">
+            <span class="counter" data-target="12">0</span><span class="text-2xl">&times;</span>
+          </div>
+          <p class="text-secondary-600 font-medium">Befektetés megtérülése</p>
+          <p class="text-secondary-400 text-sm mt-2">A szoftver ára vs. megtakarítás</p>
+        </div>
+
+        <!-- Stat 3: Hours saved -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 text-center border border-secondary-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 bg-gradient-to-br from-accent-100 to-accent-50 rounded-2xl flex items-center justify-center mx-auto mb-5">
+            <i data-lucide="clock" class="w-8 h-8 text-accent-600"></i>
+          </div>
+          <div class="text-4xl md:text-5xl font-bold text-accent-600 mb-2">
+            <span class="counter" data-target="145">0</span> <span class="text-2xl">óra</span>
+          </div>
+          <p class="text-secondary-600 font-medium">Felszabaduló idő szezonként</p>
+          <p class="text-secondary-400 text-sm mt-2">250 projekt &times; 35 perc automatizálva</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ROI CALCULATOR SECTION
+       ============================================ -->
+  <section id="roi-kalkulator" class="section bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Mennyi időt és pénzt spórolhatsz?
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Mozgasd a csúszkát és nézd meg a számokat.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="150">
+        <div class="bg-secondary-50 rounded-2xl border border-secondary-200 p-8 md:p-10">
+          <!-- Slider -->
+          <div class="mb-10">
+            <label for="roi-slider" class="block text-lg font-display font-semibold text-secondary-900 mb-4">
+              Hány osztályt fotózol évente?
+            </label>
+            <div class="relative">
+              <input
+                type="range"
+                id="roi-slider"
+                min="5"
+                max="100"
+                value="30"
+                step="1"
+                class="roi-range-slider w-full h-2 bg-secondary-200 rounded-full appearance-none cursor-pointer"
+              >
+              <div class="flex justify-between text-sm text-secondary-400 mt-2">
+                <span>5</span>
+                <span id="roi-slider-value" class="text-lg font-bold text-primary-600">30</span>
+                <span>100</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div class="grid md:grid-cols-3 gap-4 md:gap-6 mb-8">
+            <div class="bg-white rounded-xl p-5 text-center shadow-sm border border-secondary-100">
+              <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <i data-lucide="timer" class="w-5 h-5 text-primary-600"></i>
+              </div>
+              <div class="text-2xl md:text-3xl font-bold text-primary-600" id="roi-hours">17,5</div>
+              <div class="text-sm text-secondary-500 mt-1">óra megtakarítva</div>
+            </div>
+
+            <div class="bg-white rounded-xl p-5 text-center shadow-sm border border-secondary-100">
+              <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <i data-lucide="banknote" class="w-5 h-5 text-green-600"></i>
+              </div>
+              <div class="text-2xl md:text-3xl font-bold text-green-600" id="roi-money">87 500 Ft</div>
+              <div class="text-sm text-secondary-500 mt-1">megtakarított pénz</div>
+            </div>
+
+            <div class="bg-white rounded-xl p-5 text-center shadow-sm border border-secondary-100">
+              <div class="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <i data-lucide="zap" class="w-5 h-5 text-accent-600"></i>
+              </div>
+              <div class="text-2xl md:text-3xl font-bold text-accent-600" id="roi-multiplier">8,8&times;</div>
+              <div class="text-sm text-secondary-500 mt-1">ROI szorzó</div>
+            </div>
+          </div>
+
+          <p class="text-center text-secondary-500 text-sm mb-6">
+            Számítás alapja: 35 perc admin / projekt, 5 000 Ft / óra &bull; Szoftver: 9 990 Ft/hó (Fotós csomag)
+          </p>
+
+          <!-- CTA -->
+          <div class="text-center">
+            <a href="https://app.tablostudio.hu/register-app" class="btn-accent text-lg px-10 py-4 shadow-xl shadow-accent-500/30 hover:shadow-2xl hover:shadow-accent-500/40">
+              Próbáld ki 14 napig ingyen
+              <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -447,6 +756,107 @@
   </section>
 
   <!-- ============================================
+       COMPARISON SECTION
+       ============================================ -->
+  <section id="osszehasonlitas" class="section bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Régi módszer vs. TablóStúdió
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Nézd meg, mennyit egyszerűsíthetsz a mindennapjaidon.
+        </p>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="max-w-3xl mx-auto hidden md:block" data-aos="fade-up" data-aos-delay="150">
+        <div class="bg-white rounded-2xl shadow-lg border border-secondary-100 overflow-hidden">
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th class="text-left py-4 px-6 bg-secondary-50 text-secondary-600 font-semibold text-sm uppercase tracking-wider"></th>
+                <th class="py-4 px-6 bg-red-50 text-red-700 font-semibold text-sm uppercase tracking-wider text-center">
+                  <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="x-circle" class="w-4 h-4"></i>
+                    Régi módszer
+                  </div>
+                </th>
+                <th class="py-4 px-6 bg-green-50 text-green-700 font-semibold text-sm uppercase tracking-wider text-center">
+                  <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4"></i>
+                    TablóStúdió
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-secondary-100">
+              <tr>
+                <td class="py-4 px-6 text-secondary-900 font-medium">Képválasztás</td>
+                <td class="py-4 px-6 text-red-600 text-center">Telefon / email / papír</td>
+                <td class="py-4 px-6 text-green-700 font-semibold text-center bg-green-50/50">Online, QR kóddal</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 text-secondary-900 font-medium">Fizetés</td>
+                <td class="py-4 px-6 text-red-600 text-center">Készpénz, átutalás</td>
+                <td class="py-4 px-6 text-green-700 font-semibold text-center bg-green-50/50">Online Stripe fizetés</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 text-secondary-900 font-medium">Értesítések</td>
+                <td class="py-4 px-6 text-red-600 text-center">Kézi hívogatás</td>
+                <td class="py-4 px-6 text-green-700 font-semibold text-center bg-green-50/50">Automatikus push / SMS</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 text-secondary-900 font-medium">Nyomda küldés</td>
+                <td class="py-4 px-6 text-red-600 text-center">WeTransfer, email</td>
+                <td class="py-4 px-6 text-green-700 font-semibold text-center bg-green-50/50">Egy kattintás</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 text-secondary-900 font-medium">Admin idő / projekt</td>
+                <td class="py-4 px-6 text-center">
+                  <span class="inline-flex items-center gap-1.5 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-bold">35 perc</span>
+                </td>
+                <td class="py-4 px-6 text-center bg-green-50/50">
+                  <span class="inline-flex items-center gap-1.5 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">0 perc</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mobile cards -->
+      <div class="md:hidden space-y-4 max-w-sm mx-auto" data-aos="fade-up" data-aos-delay="150">
+        <div class="bg-white rounded-xl shadow-md p-5 border border-secondary-100">
+          <div class="font-semibold text-secondary-900 mb-3">Képválasztás</div>
+          <div class="flex items-center gap-2 text-red-600 text-sm mb-1"><i data-lucide="x" class="w-4 h-4"></i> Telefon / email / papír</div>
+          <div class="flex items-center gap-2 text-green-700 text-sm font-semibold"><i data-lucide="check" class="w-4 h-4"></i> Online, QR kóddal</div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-5 border border-secondary-100">
+          <div class="font-semibold text-secondary-900 mb-3">Fizetés</div>
+          <div class="flex items-center gap-2 text-red-600 text-sm mb-1"><i data-lucide="x" class="w-4 h-4"></i> Készpénz, átutalás</div>
+          <div class="flex items-center gap-2 text-green-700 text-sm font-semibold"><i data-lucide="check" class="w-4 h-4"></i> Online Stripe fizetés</div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-5 border border-secondary-100">
+          <div class="font-semibold text-secondary-900 mb-3">Értesítések</div>
+          <div class="flex items-center gap-2 text-red-600 text-sm mb-1"><i data-lucide="x" class="w-4 h-4"></i> Kézi hívogatás</div>
+          <div class="flex items-center gap-2 text-green-700 text-sm font-semibold"><i data-lucide="check" class="w-4 h-4"></i> Automatikus push / SMS</div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-5 border border-secondary-100">
+          <div class="font-semibold text-secondary-900 mb-3">Nyomda küldés</div>
+          <div class="flex items-center gap-2 text-red-600 text-sm mb-1"><i data-lucide="x" class="w-4 h-4"></i> WeTransfer, email</div>
+          <div class="flex items-center gap-2 text-green-700 text-sm font-semibold"><i data-lucide="check" class="w-4 h-4"></i> Egy kattintás</div>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-5 border border-secondary-100">
+          <div class="font-semibold text-secondary-900 mb-3">Admin idő / projekt</div>
+          <div class="flex items-center gap-2 text-red-600 text-sm mb-1"><i data-lucide="x" class="w-4 h-4"></i> 35 perc</div>
+          <div class="flex items-center gap-2 text-green-700 text-sm font-semibold"><i data-lucide="check" class="w-4 h-4"></i> 0 perc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        TESTIMONIALS SECTION
        ============================================ -->
   <section id="velemenyek" class="section bg-white">
@@ -528,6 +938,66 @@
               <div class="text-sm text-secondary-500">Iskolai fotós, Szeged</div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TRUST / SECURITY SECTION
+       ============================================ -->
+  <section id="biztonsag" class="py-12 md:py-16 bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-display font-bold text-secondary-900 mb-3">
+          Biztonságban vagy velünk
+        </h2>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 md:gap-10 lg:gap-14" data-aos="fade-up" data-aos-delay="100">
+        <!-- GDPR -->
+        <div class="flex flex-col items-center text-center w-28 md:w-32">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-3">
+            <i data-lucide="shield-check" class="w-6 h-6 text-primary-600"></i>
+          </div>
+          <div class="text-sm font-semibold text-secondary-800">GDPR</div>
+          <div class="text-xs text-secondary-500 mt-0.5">EU adatvédelem</div>
+        </div>
+
+        <!-- SSL -->
+        <div class="flex flex-col items-center text-center w-28 md:w-32">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-3">
+            <i data-lucide="lock" class="w-6 h-6 text-primary-600"></i>
+          </div>
+          <div class="text-sm font-semibold text-secondary-800">SSL titkosítás</div>
+          <div class="text-xs text-secondary-500 mt-0.5">256-bit védelem</div>
+        </div>
+
+        <!-- Stripe -->
+        <div class="flex flex-col items-center text-center w-28 md:w-32">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-3">
+            <i data-lucide="credit-card" class="w-6 h-6 text-primary-600"></i>
+          </div>
+          <div class="text-sm font-semibold text-secondary-800">Stripe fizetés</div>
+          <div class="text-xs text-secondary-500 mt-0.5">PCI DSS Level 1</div>
+        </div>
+
+        <!-- Magyar -->
+        <div class="flex flex-col items-center text-center w-28 md:w-32">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-3">
+            <i data-lucide="flag" class="w-6 h-6 text-primary-600"></i>
+          </div>
+          <div class="text-sm font-semibold text-secondary-800">Magyar fejlesztés</div>
+          <div class="text-xs text-secondary-500 mt-0.5">Helyi support</div>
+        </div>
+
+        <!-- Uptime -->
+        <div class="flex flex-col items-center text-center w-28 md:w-32">
+          <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-3">
+            <i data-lucide="server" class="w-6 h-6 text-primary-600"></i>
+          </div>
+          <div class="text-sm font-semibold text-secondary-800">99,9% uptime</div>
+          <div class="text-xs text-secondary-500 mt-0.5">EU szerver</div>
         </div>
       </div>
     </div>
@@ -826,6 +1296,7 @@
             <li><a href="#arak" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Árak</a></li>
             <li><a href="#velemenyek" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Vélemények</a></li>
             <li><a href="#gyik" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">GYIK</a></li>
+            <li><a href="/nyomdaknak.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Nyomdáknak</a></li>
           </ul>
         </div>
 
@@ -1282,6 +1753,161 @@
 
     // Load pricing on page load
     loadPricingData();
+
+    // ================================
+    // SEASONAL BANNER + COUNTDOWN
+    // ================================
+    (function() {
+      var banner = document.getElementById('seasonal-banner');
+      var bannerClose = document.getElementById('banner-close');
+      if (!banner || !bannerClose) return;
+
+      var isBannerClosed = sessionStorage.getItem('bannerClosed') === 'true';
+      if (isBannerClosed) return;
+
+      // Szezon: június 1 - augusztus 31 (vagy ?preview=banner URL paraméterrel bármikor)
+      var now = new Date();
+      var month = now.getMonth(); // 0-indexed: 5=jun, 6=jul, 7=aug
+      var isPreview = window.location.search.indexOf('preview=banner') !== -1;
+      if (!isPreview && (month < 5 || month > 7)) return; // Csak szezonban jelenik meg
+
+      // Countdown target: aug 31 éjfél
+      var targetDate = new Date(now.getFullYear(), 8, 1, 0, 0, 0); // szept 1 00:00 = aug 31 vége
+
+      banner.style.display = '';
+
+      var cdDays = document.getElementById('cd-days');
+      var cdHours = document.getElementById('cd-hours');
+      var cdMins = document.getElementById('cd-mins');
+      var cdSecs = document.getElementById('cd-secs');
+
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+      function updateCountdown() {
+        var diff = targetDate - new Date();
+        if (diff <= 0) {
+          banner.style.display = 'none';
+          return;
+        }
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        cdDays.textContent = pad(d);
+        cdHours.textContent = pad(h);
+        cdMins.textContent = pad(m);
+        cdSecs.textContent = pad(s);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      bannerClose.addEventListener('click', function() {
+        sessionStorage.setItem('bannerClosed', 'true');
+        banner.style.display = 'none';
+      });
+    })();
+
+    // ================================
+    // STICKY CTA BAR
+    // ================================
+    (function() {
+      var stickyCta = document.getElementById('sticky-cta');
+      var stickyClose = document.getElementById('sticky-cta-close');
+      var heroSection = document.getElementById('hero');
+      var headerEl = document.getElementById('header');
+      if (!stickyCta || !heroSection || !headerEl) return;
+
+      var isClosed = sessionStorage.getItem('stickyClosed') === 'true';
+      var isVisible = false;
+      var stickyHeight = 44; // px
+
+      if (isClosed) {
+        stickyCta.style.display = 'none';
+        return;
+      }
+
+      stickyCta.style.display = '';
+
+      function updateStickyBar() {
+        var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        var shouldShow = window.scrollY > heroBottom && !isClosed;
+
+        if (shouldShow && !isVisible) {
+          isVisible = true;
+          stickyCta.style.transform = 'translateY(0)';
+          headerEl.style.top = stickyHeight + 'px';
+        } else if (!shouldShow && isVisible) {
+          isVisible = false;
+          stickyCta.style.transform = 'translateY(-100%)';
+          headerEl.style.top = '0';
+        }
+      }
+
+      window.addEventListener('scroll', updateStickyBar, { passive: true });
+      updateStickyBar();
+
+      stickyClose.addEventListener('click', function() {
+        isClosed = true;
+        isVisible = false;
+        sessionStorage.setItem('stickyClosed', 'true');
+        stickyCta.style.transform = 'translateY(-100%)';
+        headerEl.style.top = '0';
+        setTimeout(function() { stickyCta.style.display = 'none'; }, 300);
+      });
+    })();
+
+    // ================================
+    // ROI CALCULATOR
+    // ================================
+    (function() {
+      var slider = document.getElementById('roi-slider');
+      var sliderValue = document.getElementById('roi-slider-value');
+      var roiHours = document.getElementById('roi-hours');
+      var roiMoney = document.getElementById('roi-money');
+      var roiMultiplier = document.getElementById('roi-multiplier');
+      if (!slider) return;
+
+      var perProject = 35;       // perc admin / projekt
+      var hourlyRate = 5000;     // Ft / óra
+      var softwareMonthly = 9990; // Ft / hó
+
+      function calculateROI(classes) {
+        var savedMinutes = classes * perProject;
+        var savedHours = savedMinutes / 60;
+        var savedMoney = savedHours * hourlyRate;
+        var roi = savedMoney / softwareMonthly;
+        return { savedHours: savedHours, savedMoney: savedMoney, roi: roi };
+      }
+
+      function formatNumber(num) {
+        return Math.round(num).toLocaleString('hu-HU');
+      }
+
+      function updateROI() {
+        var classes = parseInt(slider.value, 10);
+        var result = calculateROI(classes);
+
+        sliderValue.textContent = classes;
+        roiHours.textContent = result.savedHours % 1 === 0
+          ? formatNumber(result.savedHours)
+          : result.savedHours.toFixed(1).replace('.', ',');
+        roiMoney.textContent = formatNumber(result.savedMoney) + ' Ft';
+        roiMultiplier.textContent = result.roi.toFixed(1).replace('.', ',') + '\u00d7';
+      }
+
+      function updateSliderFill() {
+        var val = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+        slider.style.background = 'linear-gradient(to right, #2563EB 0%, #2563EB ' + val + '%, #E2E8F0 ' + val + '%, #E2E8F0 100%)';
+      }
+
+      slider.addEventListener('input', function() {
+        updateROI();
+        updateSliderFill();
+      });
+      updateROI();
+      updateSliderFill();
+    })();
 
     // Drag-to-scroll + nav gombok a pricing carousel-hez
     document.querySelectorAll('.pricing-carousel-wrap').forEach(function(wrap) {

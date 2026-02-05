@@ -248,6 +248,52 @@
   }
 }
 
+/* ROI Calculator range slider - Safari compatible */
+.roi-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #2563EB 0%, #E2E8F0 0%);
+  outline: none;
+  transition: background 0.15s ease;
+}
+
+.roi-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.roi-range-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+  transform: scale(1.1);
+}
+
+.roi-range-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.roi-range-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: #E2E8F0;
+}
+
 /* Animation utilities */
 @layer utilities {
   .animation-delay-200 {
