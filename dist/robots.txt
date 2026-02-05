@@ -1,11 +1,5 @@
 # TablóStúdió robots.txt
+# FEJLESZTÉS ALATT - ne indexelje semmilyen kereső
 
 User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://tablostudio.hu/sitemap.xml
-
-# Block admin/api paths (Angular app handles these)
-Disallow: /api/
-Disallow: /admin/
+Disallow: /

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TablóStúdió - Modern iskolai tablófotó rendszer fotósoknak. Egyszerű képválasztás, online galéria, automatikus retusálás.">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="keywords" content="tablófotó, iskolai fotó, képválasztó, fotós szoftver, osztálykép, ballagás">
   <meta name="author" content="TablóStúdió">
 
@@ -332,10 +333,10 @@
       </div>
 
       <!-- Pricing cards - dynamically loaded from API -->
-      <div id="pricing-cards" class="grid md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
+      <div id="pricing-cards" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-8 md:overflow-visible md:snap-none md:pb-0 max-w-6xl mx-auto pricing-carousel">
         <!-- Cards will be rendered dynamically by JavaScript -->
         <!-- Fallback skeleton while loading -->
-        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none">
           <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
           <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
           <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
@@ -346,7 +347,7 @@
           </div>
           <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
-        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none">
           <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
           <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
           <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
@@ -357,7 +358,7 @@
           </div>
           <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
-        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none">
           <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
           <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
           <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
@@ -1064,12 +1065,13 @@
       card.setAttribute('data-aos-delay', String(index * 100));
       card.setAttribute('data-plan-id', planId);
 
+      var snapClass = 'min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none';
       if (isPopular) {
-        card.className = 'pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4 flex flex-col';
+        card.className = 'pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4 flex flex-col ' + snapClass;
       } else if (isVip) {
-        card.className = 'pricing-card pricing-card--vip bg-white rounded-2xl p-8 shadow-2xl border-2 border-amber-500 relative flex flex-col';
+        card.className = 'pricing-card pricing-card--vip bg-white rounded-2xl p-8 shadow-2xl border-2 border-amber-500 relative flex flex-col ' + snapClass;
       } else {
-        card.className = 'pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col';
+        card.className = 'pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col ' + snapClass;
       }
 
       // Popular badge
@@ -1080,17 +1082,9 @@
         card.appendChild(badge);
       }
 
-      // VIP badge
-      if (isVip) {
-        const badge = document.createElement('div');
-        badge.className = 'absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg';
-        badge.textContent = 'Prémium';
-        card.appendChild(badge);
-      }
-
       // Title
       const h3 = document.createElement('h3');
-      h3.className = 'text-xl font-display font-bold text-secondary-900 mb-2' + (isPopular || isVip ? ' mt-2' : '');
+      h3.className = 'text-xl font-display font-bold text-secondary-900 mb-2' + (isPopular ? ' mt-2' : '');
       h3.textContent = shortName;
       card.appendChild(h3);
 
