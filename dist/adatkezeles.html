@@ -130,10 +130,82 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-secondary-900 text-secondary-300 py-8">
-    <div class="container-custom text-center text-sm">
-      <p>&copy; 2024 TablóStúdió. Minden jog fenntartva.</p>
+  <footer class="bg-secondary-900 text-secondary-400">
+    <div class="container-custom">
+      <!-- Main footer content -->
+      <div class="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <!-- Brand -->
+        <div class="md:col-span-2 lg:col-span-1">
+          <a href="/" class="inline-block">
+            <span class="text-2xl font-display font-bold text-white">TablóStúdió</span>
+          </a>
+          <p class="mt-4 text-sm leading-relaxed max-w-xs">
+            Modern iskolai tablófotó rendszer fotósoknak. Automatizáld a munkádat, adj profi élményt ügyfeleidnek.
+          </p>
+          <!-- Social links -->
+          <div class="flex items-center gap-3 mt-6">
+            <a href="#" class="w-10 h-10 rounded-full bg-secondary-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-200">
+              <i data-lucide="facebook" class="w-5 h-5 text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-secondary-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-200">
+              <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Termék -->
+        <div>
+          <h4 class="font-display font-bold text-white mb-5">Termék</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/#funkciok" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Funkciók</a></li>
+            <li><a href="/#arak" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Árak</a></li>
+            <li><a href="/#velemenyek" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Vélemények</a></li>
+            <li><a href="/#gyik" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">GYIK</a></li>
+          </ul>
+        </div>
+
+        <!-- Cég -->
+        <div>
+          <h4 class="font-display font-bold text-white mb-5">Cég</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/impresszum.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Impresszum</a></li>
+            <li><a href="/adatkezeles.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Adatkezelési tájékoztató</a></li>
+            <li><a href="/aszf.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">ÁSZF</a></li>
+          </ul>
+        </div>
+
+        <!-- Kapcsolat -->
+        <div>
+          <h4 class="font-display font-bold text-white mb-5">Kapcsolat</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-primary-400"></i>
+              <a href="mailto:info@tablostudio.hu" class="hover:text-white transition-colors">info@tablostudio.hu</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-primary-400"></i>
+              <a href="tel:+36301234567" class="hover:text-white transition-colors">+36 30 123 4567</a>
+            </li>
+            <li class="mt-4">
+              <a href="/#kapcsolat" class="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium transition-colors">
+                Írj nekünk
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-secondary-800 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <p>&copy; 2025 TablóStúdió. Minden jog fenntartva.</p>
+        <p class="text-secondary-500">Készült Magyarországon, fotósoknak.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

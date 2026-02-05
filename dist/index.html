@@ -331,139 +331,42 @@
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
-        <!-- Alap csomag -->
-        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="0">
-          <h3 class="text-xl font-display font-bold text-secondary-900 mb-2">Alap</h3>
-          <p class="text-secondary-500 text-sm mb-6">Kisebb fotósoknak</p>
-          <div class="mb-6">
-            <span class="text-4xl font-bold text-secondary-900 price-monthly">4.990</span>
-            <span class="text-4xl font-bold text-secondary-900 price-yearly hidden">49.900</span>
-            <span class="text-lg font-medium text-secondary-500 price-suffix-monthly">Ft/hó</span>
-            <span class="text-lg font-medium text-secondary-500 price-suffix-yearly hidden">Ft/év</span>
+      <!-- Pricing cards - dynamically loaded from API -->
+      <div id="pricing-cards" class="grid md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <!-- Cards will be rendered dynamically by JavaScript -->
+        <!-- Fallback skeleton while loading -->
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+          <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
+          <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
+          <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
+          <div class="space-y-4 mb-8">
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
           </div>
-          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">4.158 Ft/hó-val egyenértékű</p>
-          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>5 GB tárhely</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Max. 10 osztály</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Max. 30 iskola</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Online képválasztás</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Sablon szerkesztő</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>QR kódos megosztás</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Email támogatás</span>
-            </li>
-          </ul>
-          <a href="https://app.tablostudio.hu/register-app" class="btn-secondary w-full justify-center mt-auto">Kezdés</a>
+          <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
-
-        <!-- Iskola csomag (Népszerű) -->
-        <div class="pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg">
-            Legnépszerűbb
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+          <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
+          <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
+          <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
+          <div class="space-y-4 mb-8">
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
           </div>
-          <h3 class="text-xl font-display font-bold text-secondary-900 mb-2 mt-2">Iskola</h3>
-          <p class="text-secondary-500 text-sm mb-6">Legtöbb fotósnak ideális</p>
-          <div class="mb-6">
-            <span class="text-4xl font-bold text-primary-600 price-monthly">14.990</span>
-            <span class="text-4xl font-bold text-primary-600 price-yearly hidden">149.900</span>
-            <span class="text-lg font-medium text-secondary-500 price-suffix-monthly">Ft/hó</span>
-            <span class="text-lg font-medium text-secondary-500 price-suffix-yearly hidden">Ft/év</span>
-          </div>
-          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">12.492 Ft/hó-val egyenértékű</p>
-          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>100 GB tárhely</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Max. 20 osztály</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Korlátlan iskola</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Saját subdomain</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Online fizetés (Stripe)</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>SMS értesítések</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Prioritás támogatás</span>
-            </li>
-          </ul>
-          <a href="https://app.tablostudio.hu/register-app" class="btn-primary w-full justify-center shadow-lg shadow-primary-500/30 mt-auto">Kezdés</a>
+          <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
-
-        <!-- Stúdió csomag -->
-        <div class="pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-xl font-display font-bold text-secondary-900 mb-2">Stúdió</h3>
-          <p class="text-secondary-500 text-sm mb-6">Nagyobb stúdióknak</p>
-          <div class="mb-6">
-            <span class="text-4xl font-bold text-secondary-900 price-monthly">29.990</span>
-            <span class="text-4xl font-bold text-secondary-900 price-yearly hidden">299.900</span>
-            <span class="text-lg font-medium text-secondary-500 price-suffix-monthly">Ft/hó</span>
-            <span class="text-lg font-medium text-secondary-500 price-suffix-yearly hidden">Ft/év</span>
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+          <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
+          <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
+          <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
+          <div class="space-y-4 mb-8">
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
           </div>
-          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden">24.992 Ft/hó-val egyenértékű</p>
-          <p class="text-sm text-secondary-400 mb-6 h-5 price-note-monthly">&nbsp;</p>
-          <ul class="space-y-4 mb-8 flex-grow">
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>500 GB tárhely</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Korlátlan osztály</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Custom domain</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>White-label (saját márka)</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>API hozzáférés</span>
-            </li>
-            <li class="flex items-center text-secondary-700">
-              <i data-lucide="check" class="w-5 h-5 text-green-500 mr-3 flex-shrink-0"></i>
-              <span>Dedikált support</span>
-            </li>
-          </ul>
-          <a href="https://app.tablostudio.hu/register-app" class="btn-secondary w-full justify-center mt-auto">Kezdés</a>
+          <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
       </div>
     </div>
@@ -1103,6 +1006,247 @@
         }
       });
     });
+
+    // ================================
+    // PRICING SECTION - Dynamic Loading
+    // ================================
+    const API_URL = 'https://api.tablostudio.hu/api/plans';
+    let pricingData = null;
+    let isYearlyBilling = false;
+
+    // Format price for display
+    function formatPriceValue(price) {
+      return price.toLocaleString('hu-HU');
+    }
+
+    // Get monthly equivalent for yearly price
+    function getMonthlyEquivalent(yearlyPrice) {
+      return Math.round(yearlyPrice / 12);
+    }
+
+    // Create a feature list item using DOM APIs
+    function createFeatureItem(featureText) {
+      const li = document.createElement('li');
+      li.className = 'flex items-center text-secondary-700';
+
+      const icon = document.createElement('i');
+      icon.setAttribute('data-lucide', 'check');
+      icon.className = 'w-5 h-5 text-green-500 mr-3 flex-shrink-0';
+
+      const span = document.createElement('span');
+      span.textContent = featureText;
+
+      li.appendChild(icon);
+      li.appendChild(span);
+      return li;
+    }
+
+    // Create a pricing card using DOM APIs
+    function createPricingCard(planId, plan, index) {
+      const isPopular = plan.popular === true;
+      const shortName = plan.name.replace('TablóStúdió ', '');
+      const monthlyPrice = plan.monthly_price;
+      const yearlyPrice = plan.yearly_price;
+      const monthlyEquiv = getMonthlyEquivalent(yearlyPrice);
+      const isVip = planId === 'vip';
+
+      // Create card container
+      const card = document.createElement('div');
+      card.setAttribute('data-aos', 'fade-up');
+      card.setAttribute('data-aos-delay', String(index * 100));
+      card.setAttribute('data-plan-id', planId);
+
+      if (isPopular) {
+        card.className = 'pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4 flex flex-col';
+      } else if (isVip) {
+        card.className = 'pricing-card pricing-card--vip bg-white rounded-2xl p-8 shadow-2xl border-2 border-amber-500 relative flex flex-col';
+      } else {
+        card.className = 'pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col';
+      }
+
+      // Popular badge
+      if (isPopular) {
+        const badge = document.createElement('div');
+        badge.className = 'absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg';
+        badge.textContent = 'Legnépszerűbb';
+        card.appendChild(badge);
+      }
+
+      // VIP badge
+      if (isVip) {
+        const badge = document.createElement('div');
+        badge.className = 'absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg';
+        badge.textContent = 'Prémium';
+        card.appendChild(badge);
+      }
+
+      // Title
+      const h3 = document.createElement('h3');
+      h3.className = 'text-xl font-display font-bold text-secondary-900 mb-2' + (isPopular || isVip ? ' mt-2' : '');
+      h3.textContent = shortName;
+      card.appendChild(h3);
+
+      // Description
+      const desc = document.createElement('p');
+      desc.className = 'text-secondary-500 text-sm mb-6';
+      desc.textContent = plan.description;
+      card.appendChild(desc);
+
+      // Price container
+      const priceDiv = document.createElement('div');
+      priceDiv.className = 'mb-6';
+
+      const priceColor = isPopular ? 'text-primary-600' : 'text-secondary-900';
+
+      const priceMonthly = document.createElement('span');
+      priceMonthly.className = 'text-4xl font-bold ' + priceColor + ' price-monthly';
+      priceMonthly.textContent = formatPriceValue(monthlyPrice);
+
+      const priceYearly = document.createElement('span');
+      priceYearly.className = 'text-4xl font-bold ' + priceColor + ' price-yearly hidden';
+      priceYearly.textContent = formatPriceValue(yearlyPrice);
+
+      const suffixMonthly = document.createElement('span');
+      suffixMonthly.className = 'text-lg font-medium text-secondary-500 price-suffix-monthly';
+      suffixMonthly.textContent = 'Ft/hó';
+
+      const suffixYearly = document.createElement('span');
+      suffixYearly.className = 'text-lg font-medium text-secondary-500 price-suffix-yearly hidden';
+      suffixYearly.textContent = 'Ft/év';
+
+      priceDiv.appendChild(priceMonthly);
+      priceDiv.appendChild(priceYearly);
+      priceDiv.appendChild(suffixMonthly);
+      priceDiv.appendChild(suffixYearly);
+      card.appendChild(priceDiv);
+
+      // Monthly equivalent note (yearly)
+      const noteYearly = document.createElement('p');
+      noteYearly.className = 'text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden';
+      noteYearly.textContent = formatPriceValue(monthlyEquiv) + ' Ft/hó-val egyenértékű';
+      card.appendChild(noteYearly);
+
+      // Empty note (monthly)
+      const noteMonthly = document.createElement('p');
+      noteMonthly.className = 'text-sm text-secondary-400 mb-6 h-5 price-note-monthly';
+      noteMonthly.innerHTML = '&nbsp;';
+      card.appendChild(noteMonthly);
+
+      // Features list
+      const ul = document.createElement('ul');
+      ul.className = 'space-y-4 mb-8 flex-grow';
+      plan.feature_labels.forEach(feature => {
+        ul.appendChild(createFeatureItem(feature));
+      });
+      card.appendChild(ul);
+
+      // CTA button
+      const btn = document.createElement('a');
+      btn.href = 'https://app.tablostudio.hu/register-app?plan=' + planId;
+      if (isPopular) {
+        btn.className = 'btn-primary w-full justify-center shadow-lg shadow-primary-500/30 mt-auto';
+      } else if (isVip) {
+        btn.className = 'btn-accent w-full justify-center shadow-lg shadow-amber-500/30 mt-auto';
+      } else {
+        btn.className = 'btn-secondary w-full justify-center mt-auto';
+      }
+      btn.textContent = 'Kezdés';
+      card.appendChild(btn);
+
+      return card;
+    }
+
+    // Render all pricing cards
+    function renderPricingCards(plansData) {
+      const container = document.getElementById('pricing-cards');
+      if (!container || !plansData.plans) return;
+
+      // Plan order: alap, iskola, studio, vip
+      const planOrder = ['alap', 'iskola', 'studio', 'vip'];
+      const sortedPlans = planOrder
+        .filter(id => plansData.plans[id])
+        .map(id => ({ id, plan: plansData.plans[id] }));
+
+      // Clear container
+      container.textContent = '';
+
+      // Add cards
+      sortedPlans.forEach((item, index) => {
+        container.appendChild(createPricingCard(item.id, item.plan, index));
+      });
+
+      // Update grid columns based on number of plans
+      const numPlans = sortedPlans.length;
+      if (numPlans === 4) {
+        container.classList.remove('md:grid-cols-3');
+        container.classList.add('md:grid-cols-2', 'lg:grid-cols-4');
+      } else if (numPlans === 3) {
+        container.classList.remove('lg:grid-cols-4');
+        container.classList.add('md:grid-cols-3');
+      }
+
+      // Re-initialize Lucide icons for the new content
+      lucide.createIcons();
+
+      // Re-initialize AOS for the new elements
+      AOS.refresh();
+
+      // Apply current billing toggle state
+      updatePricing(isYearlyBilling);
+    }
+
+    // Load pricing data from API
+    async function loadPricingData() {
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw new Error('API request failed');
+        pricingData = await response.json();
+        renderPricingCards(pricingData);
+      } catch (error) {
+        console.warn('Failed to load pricing from API, using fallback:', error);
+        // Fallback data if API fails
+        const fallbackData = {
+          plans: {
+            alap: {
+              name: 'TablóStúdió Alap',
+              description: 'Kisebb fotósoknak',
+              popular: false,
+              monthly_price: 4990,
+              yearly_price: 49900,
+              feature_labels: ['5 GB tárhely', 'Max. 10 osztály', 'Max. 20 iskola', 'Online képválasztás', 'Sablon szerkesztő', 'QR kódos megosztás', 'Email támogatás']
+            },
+            iskola: {
+              name: 'TablóStúdió Iskola',
+              description: 'Legtöbb fotósnak ideális',
+              popular: true,
+              monthly_price: 14990,
+              yearly_price: 149900,
+              feature_labels: ['100 GB tárhely', 'Max. 20 osztály', 'Korlátlan iskola', 'Saját subdomain', 'Online fizetés (Stripe)', 'SMS értesítések', 'Prioritás támogatás']
+            },
+            studio: {
+              name: 'TablóStúdió Stúdió',
+              description: 'Nagyobb stúdióknak',
+              popular: false,
+              monthly_price: 29990,
+              yearly_price: 299900,
+              feature_labels: ['500 GB tárhely', 'Korlátlan osztály', 'Custom domain', 'White-label (saját márka)', 'API hozzáférés', 'Dedikált support']
+            },
+            vip: {
+              name: 'TablóStúdió VIP',
+              description: 'Korlátlan tárhely és minden funkció',
+              popular: false,
+              monthly_price: 49990,
+              yearly_price: 499900,
+              feature_labels: ['Korlátlan tárhely', 'Korlátlan osztály', 'Custom domain', 'White-label (saját márka)', 'API hozzáférés', 'Dedikált support', 'Prioritás támogatás']
+            }
+          }
+        };
+        renderPricingCards(fallbackData);
+      }
+    }
+
+    // Load pricing on page load
+    loadPricingData();
   </script>
 </body>
 </html>

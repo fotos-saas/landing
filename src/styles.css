@@ -12,7 +12,11 @@
   }
 
   body {
-    @apply font-sans text-secondary-900 antialiased;
+    @apply font-sans text-secondary-900 antialiased min-h-screen flex flex-col;
+  }
+
+  main {
+    @apply flex-1;
   }
 
   h1, h2, h3, h4 {
