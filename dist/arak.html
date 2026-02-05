@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TablóStúdió csomagok és árak - Átlátható árazás fotósoknak. Alap, Iskola, Stúdió és VIP csomagok részletes összehasonlítása.">
+  <meta name="keywords" content="tablófotó árak, fotós szoftver előfizetés, képválasztó rendszer ár, tablóstúdió csomag">
+  <meta name="author" content="TablóStúdió">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tablostudio.hu/arak.html">
+  <meta property="og:title" content="Árak - TablóStúdió">
+  <meta property="og:description" content="Átlátható árazás fotósoknak. 14 nap ingyenes próba, nincs rejtett költség.">
+  <meta property="og:image" content="https://tablostudio.hu/assets/images/og-image.jpg">
+
+  <link rel="canonical" href="https://tablostudio.hu/arak.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+
+  <title>Árak - TablóStúdió</title>
+
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-secondary-100">
+    <nav class="container-custom">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="/" class="flex items-center space-x-2">
+          <span class="text-2xl font-display font-bold gradient-text">TablóStúdió</span>
+        </a>
+        <a href="/" class="text-primary-600 hover:text-primary-700 font-medium transition-colors inline-flex items-center">
+          <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+          Vissza a főoldalra
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-primary-700"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
+
+    <div class="container-custom relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4" data-aos="fade-up">
+          Átlátható árazás, fotósoknak tervezve
+        </h1>
+        <p class="text-lg md:text-xl text-primary-100 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          14 nap ingyenes próba, nincs rejtett költség, bármikor lemondható. Válaszd a neked megfelelő csomagot.
+        </p>
+
+        <!-- Billing Toggle -->
+        <div class="inline-flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full p-1.5" data-aos="fade-up" data-aos-delay="150">
+          <button type="button" id="btn-monthly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-white text-secondary-900 shadow-md">
+            Havi
+          </button>
+          <button type="button" id="btn-yearly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 text-white/80 hover:text-white">
+            Éves
+            <span class="ml-1.5 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">-17%</span>
+          </button>
+          <input type="checkbox" id="billing-toggle" class="sr-only">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRICING CARDS
+       ============================================ -->
+  <section class="section bg-secondary-50 -mt-1">
+    <div class="container-custom">
+      <div id="pricing-cards" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <!-- Skeleton loading -->
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+          <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
+          <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
+          <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
+          <div class="space-y-4 mb-8">
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+          </div>
+          <div class="h-12 bg-secondary-200 rounded"></div>
+        </div>
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+          <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
+          <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
+          <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
+          <div class="space-y-4 mb-8">
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+          </div>
+          <div class="h-12 bg-secondary-200 rounded"></div>
+        </div>
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+          <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
+          <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
+          <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
+          <div class="space-y-4 mb-8">
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+          </div>
+          <div class="h-12 bg-secondary-200 rounded"></div>
+        </div>
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
+          <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
+          <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
+          <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
+          <div class="space-y-4 mb-8">
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+            <div class="h-4 bg-secondary-100 rounded"></div>
+          </div>
+          <div class="h-12 bg-secondary-200 rounded"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MINDEN CSOMAGBAN BENNE VAN
+       ============================================ -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Minden csomagban benne van
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Ezeket a funkciókat az Alap csomagtól kezdve mindenki megkapja.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div class="text-center p-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="camera" class="w-7 h-7 text-primary-600"></i>
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">Online képválasztás</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Szülők otthonról, bármilyen eszközről választhatnak képet gyermeküknek.</p>
+        </div>
+
+        <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="palette" class="w-7 h-7 text-primary-600"></i>
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">Sablon szerkesztő</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Drag-and-drop tablószerkesztő beépített sablonokkal a gyors munkához.</p>
+        </div>
+
+        <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="qr-code" class="w-7 h-7 text-primary-600"></i>
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">QR kódos megosztás</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Egyedi QR kód minden diákhoz, amit az iskola is könnyen tud terjeszteni.</p>
+        </div>
+
+        <div class="text-center p-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="mail" class="w-7 h-7 text-primary-600"></i>
+          </div>
+          <h3 class="font-display font-bold text-secondary-900 mb-2">Email támogatás</h3>
+          <p class="text-secondary-600 text-sm leading-relaxed">Kérdés esetén emailben elérhetők vagyunk munkanapokon 24 órán belül.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CSOMAG SPOTLIGHT SZEKCIÓK
+       ============================================ -->
+
+  <!-- ALAP -->
+  <section class="section bg-secondary-50" id="alap">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-start gap-8" data-aos="fade-up">
+          <div class="flex-shrink-0 md:w-64">
+            <div class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 font-bold text-sm mb-3">
+              <i data-lucide="box" class="w-4 h-4 mr-2"></i>
+              Alap csomag
+            </div>
+            <div class="text-3xl font-bold text-secondary-900">4.990 <span class="text-lg font-medium text-secondary-500">Ft/hó</span></div>
+            <p class="text-secondary-500 text-sm mt-2">Kezdő fotósoknak, kisebb volumenhez</p>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-display font-bold text-secondary-900 mb-4">Limitek</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">5 GB</div>
+                <div class="text-sm text-secondary-500">Tárhely</div>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">10</div>
+                <div class="text-sm text-secondary-500">Osztály</div>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">20</div>
+                <div class="text-sm text-secondary-500">Iskola</div>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">50</div>
+                <div class="text-sm text-secondary-500">Kapcsolattartó</div>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">10</div>
+                <div class="text-sm text-secondary-500">Sablon</div>
+              </div>
+            </div>
+            <p class="text-secondary-600 text-sm mt-4 leading-relaxed">
+              Tökéletes választás, ha most ismerkedsz a rendszerrel. Tartalmazza az összes alapfunkciót: online képválasztás, sablon szerkesztő, QR kódos megosztás és email támogatás.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISKOLA - LEGNÉPSZERŰBB -->
+  <section class="section bg-white" id="iskola">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-start gap-8" data-aos="fade-up">
+          <div class="flex-shrink-0 md:w-64">
+            <div class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 text-white font-bold text-sm mb-3">
+              <i data-lucide="star" class="w-4 h-4 mr-2"></i>
+              Iskola csomag
+            </div>
+            <div class="text-3xl font-bold text-primary-600">14.990 <span class="text-lg font-medium text-secondary-500">Ft/hó</span></div>
+            <p class="text-secondary-500 text-sm mt-2">Legtöbb fotósnak ideális</p>
+            <div class="mt-3 inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+              <i data-lucide="trending-up" class="w-3 h-3 mr-1"></i>
+              Legnépszerűbb
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-display font-bold text-secondary-900 mb-4">Plusz funkciók az Alap csomaghoz képest</h3>
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start gap-4 bg-secondary-50 rounded-xl p-4">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="globe" class="w-5 h-5 text-primary-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Saját subdomain</div>
+                  <p class="text-secondary-600 text-sm">Pl. "atenevedd.tablostudio.hu" a professzionális megjelenésért.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-secondary-50 rounded-xl p-4">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="credit-card" class="w-5 h-5 text-primary-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Online fizetés (Stripe)</div>
+                  <p class="text-secondary-600 text-sm">Szülők közvetlenül fizethetnek bankkártyával a rendszeren belül.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-secondary-50 rounded-xl p-4">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="smartphone" class="w-5 h-5 text-primary-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">SMS értesítések</div>
+                  <p class="text-secondary-600 text-sm">Automatikus SMS emlékeztetők a szülőknek a határidők előtt.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-secondary-50 rounded-xl p-4">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="headphones" class="w-5 h-5 text-primary-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Prioritás támogatás</div>
+                  <p class="text-secondary-600 text-sm">Gyorsabb válaszidő, dedikált segítség munkanapokon.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-secondary-50 rounded-xl p-4">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="messages-square" class="w-5 h-5 text-primary-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Fórum + Szavazás</div>
+                  <p class="text-secondary-600 text-sm">Közösségi funkciók beépítve a szülői kommunikációhoz.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-display font-bold text-secondary-900 mb-4">Limitek</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="bg-secondary-50 rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">100 GB</div>
+                <div class="text-sm text-secondary-500">Tárhely</div>
+              </div>
+              <div class="bg-secondary-50 rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">20</div>
+                <div class="text-sm text-secondary-500">Osztály</div>
+              </div>
+              <div class="bg-secondary-50 rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-green-600">Korlátlan</div>
+                <div class="text-sm text-secondary-500">Iskola / Kapcsolat / Sablon</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STÚDIÓ -->
+  <section class="section bg-secondary-50" id="studio">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-start gap-8" data-aos="fade-up">
+          <div class="flex-shrink-0 md:w-64">
+            <div class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-secondary-800 text-white font-bold text-sm mb-3">
+              <i data-lucide="building-2" class="w-4 h-4 mr-2"></i>
+              Stúdió csomag
+            </div>
+            <div class="text-3xl font-bold text-secondary-900">29.990 <span class="text-lg font-medium text-secondary-500">Ft/hó</span></div>
+            <p class="text-secondary-500 text-sm mt-2">Nagyobb stúdióknak, full branding</p>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-display font-bold text-secondary-900 mb-4">Plusz funkciók az Iskola csomaghoz képest</h3>
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start gap-4 bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="w-10 h-10 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="link" class="w-5 h-5 text-secondary-700"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Custom domain</div>
+                  <p class="text-secondary-600 text-sm">Saját domain név, pl. "galeria.tenevedd.hu" a teljes professzionális megjelenésért.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="w-10 h-10 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="paintbrush" class="w-5 h-5 text-secondary-700"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">White-label</div>
+                  <p class="text-secondary-600 text-sm">Saját logó, színek, branding az egész felületen. A szülők a te márkádat látják.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="w-10 h-10 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="code" class="w-5 h-5 text-secondary-700"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">API hozzáférés</div>
+                  <p class="text-secondary-600 text-sm">Integráld a saját rendszereiddel: CRM, számlázó, weboldal és más eszközök.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="w-10 h-10 bg-secondary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="user-check" class="w-5 h-5 text-secondary-700"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Dedikált support</div>
+                  <p class="text-secondary-600 text-sm">Személyes kapcsolattartó, aki ismeri a vállalkozásodat és segít.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-display font-bold text-secondary-900 mb-4">Limitek</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-secondary-900">500 GB</div>
+                <div class="text-sm text-secondary-500">Tárhely</div>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-green-600">Korlátlan</div>
+                <div class="text-sm text-secondary-500">Osztály</div>
+              </div>
+              <div class="bg-white rounded-xl p-4 border border-secondary-100">
+                <div class="text-2xl font-bold text-green-600">Korlátlan</div>
+                <div class="text-sm text-secondary-500">Iskola / Kapcsolat / Sablon</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP -->
+  <section class="section bg-white" id="vip">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-start gap-8" data-aos="fade-up">
+          <div class="flex-shrink-0 md:w-64">
+            <div class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-bold text-sm mb-3">
+              <i data-lucide="crown" class="w-4 h-4 mr-2"></i>
+              VIP csomag
+            </div>
+            <div class="text-3xl font-bold text-secondary-900">49.990 <span class="text-lg font-medium text-secondary-500">Ft/hó</span></div>
+            <p class="text-secondary-500 text-sm mt-2">Korlátlan minden, prémium szolgáltatás</p>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-xl font-display font-bold text-secondary-900 mb-4">Mindent tartalmaz, plusz:</h3>
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start gap-4 bg-amber-50 rounded-xl p-4 border border-amber-200">
+                <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="hard-drive" class="w-5 h-5 text-amber-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Korlátlan tárhely</div>
+                  <p class="text-secondary-600 text-sm">Soha nem kell törölnöd vagy bővítened. Korlátlan képek, korlátlan projektek.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-amber-50 rounded-xl p-4 border border-amber-200">
+                <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="shield-check" class="w-5 h-5 text-amber-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Minden Stúdió funkció</div>
+                  <p class="text-secondary-600 text-sm">Custom domain, white-label, API, dedikált support - minden benne van.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 bg-amber-50 rounded-xl p-4 border border-amber-200">
+                <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="zap" class="w-5 h-5 text-amber-600"></i>
+                </div>
+                <div>
+                  <div class="font-semibold text-secondary-900">Prioritás támogatás</div>
+                  <p class="text-secondary-600 text-sm">Kiemelt prioritás, a leggyorsabb válaszidő minden csatornán.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-display font-bold text-secondary-900 mb-4">Limitek</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="bg-amber-50 rounded-xl p-4 border border-amber-200">
+                <div class="text-2xl font-bold text-amber-600">Korlátlan</div>
+                <div class="text-sm text-secondary-500">Tárhely</div>
+              </div>
+              <div class="bg-amber-50 rounded-xl p-4 border border-amber-200">
+                <div class="text-2xl font-bold text-amber-600">Korlátlan</div>
+                <div class="text-sm text-secondary-500">Osztály</div>
+              </div>
+              <div class="bg-amber-50 rounded-xl p-4 border border-amber-200">
+                <div class="text-2xl font-bold text-amber-600">Korlátlan</div>
+                <div class="text-sm text-secondary-500">Minden</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       KIEGÉSZÍTŐK
+       ============================================ -->
+  <section class="section bg-secondary-50">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Kiegészítők
+        </h2>
+        <p class="text-lg text-secondary-600" data-aos="fade-up" data-aos-delay="100">
+          Bővítsd a csomagodat igény szerint.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
+              <i data-lucide="messages-square" class="w-6 h-6 text-primary-600"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-secondary-900">Közösségi csomag</h3>
+              <div class="text-primary-600 font-bold">1.490 Ft/hó</div>
+            </div>
+          </div>
+          <p class="text-secondary-600 text-sm leading-relaxed mb-3">
+            Fórum + Szavazás funkció az Alap csomaghoz. Az Iskola és feljebb csomagokban ez beépítve elérhető.
+          </p>
+          <div class="inline-flex items-center text-xs text-secondary-500 bg-secondary-50 px-3 py-1 rounded-full">
+            <i data-lucide="info" class="w-3 h-3 mr-1"></i>
+            Alap csomaghoz vásárolható
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
+              <i data-lucide="hard-drive" class="w-6 h-6 text-primary-600"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-secondary-900">Extra tárhely</h3>
+              <div class="text-primary-600 font-bold">150 Ft/GB/hó</div>
+            </div>
+          </div>
+          <p class="text-secondary-600 text-sm leading-relaxed mb-3">
+            Rugalmasan bővíthető tárhely bármely csomaghoz. Csak annyit fizetsz, amennyit tényleg használsz.
+          </p>
+          <div class="inline-flex items-center text-xs text-secondary-500 bg-secondary-50 px-3 py-1 rounded-full">
+            <i data-lucide="info" class="w-3 h-3 mr-1"></i>
+            Bármely csomaghoz
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GYIK
+       ============================================ -->
+  <section class="section bg-white">
+    <div class="container-custom">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-secondary-900 mb-4" data-aos="fade-up">
+          Árazási GYIK
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-3">
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Kell bankkártya a próbaidőszakhoz?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Nem, a 14 napos próbaidőszak teljesen ingyenes és nem kér bankkártya adatokat. Csak a próbaidőszak lejárta után kell döntened, hogy melyik csomagot választod.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="50">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Mi történik, ha túllépem a tárhelyet?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Értesítünk, ha közeledik a tárhelylimit. Ha eléred, nem törlünk semmit - egyszerűen nem tudsz új képeket feltölteni, amíg nem bővítesz extra tárhellyel vagy nem váltasz nagyobb csomagra.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="100">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Válthatok csomagok között?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Igen, bármikor válthatsz magasabb vagy alacsonyabb csomagra. Felfelé váltáskor azonnal aktiválódnak az új funkciók. Lefelé váltáskor a következő számlázási ciklusban lép érvénybe a változás.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="150">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Bármikor lemondhatom?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Igen, nincsen hosszú távú elkötelezettség. Bármikor lemondhatsz az alkalmazás beállításaiban. A lemondás a számlázási időszak végén lép érvénybe, addig még használhatod a szolgáltatást. Adataidat exportálhatod, mielőtt távozol.</p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-white rounded-xl border border-secondary-200 overflow-hidden transition-all duration-300 hover:border-primary-300" data-aos="fade-up" data-aos-delay="200">
+          <button class="faq-question flex items-center justify-between w-full text-left p-5 md:p-6">
+            <h3 class="font-display font-semibold text-lg text-secondary-900 pr-4">Hogyan működik az éves számlázás?</h3>
+            <div class="w-8 h-8 rounded-full bg-secondary-100 flex items-center justify-center flex-shrink-0 faq-icon-wrap transition-all duration-300">
+              <i data-lucide="chevron-down" class="w-5 h-5 text-secondary-500 faq-icon transition-transform duration-300"></i>
+            </div>
+          </button>
+          <div class="faq-answer hidden px-5 md:px-6 pb-5 md:pb-6 text-secondary-600 leading-relaxed">
+            <p>Éves fizetés esetén 2 hónapot spórolsz (17% kedvezmény). Az éves díjat egyösszegben számlázzuk az előfizetés indulásakor. Az éves előfizetés is bármikor lemondható, a fennmaradó időszakra nincs visszatérítés.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="section bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="container-custom relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" data-aos="fade-up">
+          Próbáld ki 14 napig ingyen
+        </h2>
+        <p class="text-lg md:text-xl text-primary-100 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Minden funkcióhoz hozzáférsz a próbaidőszak alatt. Nincs bankkártya megkötés.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://app.tablostudio.hu/register-app" class="btn-accent text-lg px-10 py-5 shadow-2xl shadow-accent-500/40 hover:shadow-accent-500/50 hover:scale-105 transition-all duration-300">
+            Ingyenes próba indítása
+            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+          </a>
+        </div>
+        <p class="mt-6 text-primary-200 text-sm" data-aos="fade-up" data-aos-delay="300">
+          Nem kell bankkártya - 14 nap ingyenes - Bármikor lemondható
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="bg-secondary-900 text-secondary-400">
+    <div class="container-custom">
+      <div class="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div class="md:col-span-2 lg:col-span-1">
+          <a href="/" class="inline-block">
+            <span class="text-2xl font-display font-bold text-white">TablóStúdió</span>
+          </a>
+          <p class="mt-4 text-sm leading-relaxed max-w-xs">
+            Modern iskolai tablófotó rendszer fotósoknak. Automatizáld a munkádat, adj profi élményt ügyfeleidnek.
+          </p>
+          <div class="flex items-center gap-3 mt-6">
+            <a href="#" class="w-10 h-10 rounded-full bg-secondary-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-200">
+              <i data-lucide="facebook" class="w-5 h-5 text-white"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-secondary-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-200">
+              <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white mb-5">Termék</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/#funkciok" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Funkciók</a></li>
+            <li><a href="/arak.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Árak</a></li>
+            <li><a href="/#velemenyek" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Vélemények</a></li>
+            <li><a href="/#gyik" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">GYIK</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white mb-5">Cég</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/impresszum.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Impresszum</a></li>
+            <li><a href="/adatkezeles.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Adatkezelési tájékoztató</a></li>
+            <li><a href="/aszf.html" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">ÁSZF</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white mb-5">Kapcsolat</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-primary-400"></i>
+              <a href="mailto:info@tablostudio.hu" class="hover:text-white transition-colors">info@tablostudio.hu</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-primary-400"></i>
+              <a href="tel:+36301234567" class="hover:text-white transition-colors">+36 30 123 4567</a>
+            </li>
+            <li class="mt-4">
+              <a href="/#kapcsolat" class="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium transition-colors">
+                Írj nekünk
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-secondary-800 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <p>&copy; 2025 TablóStúdió. Minden jog fenntartva.</p>
+        <p class="text-secondary-500">Készült Magyarországon, fotósoknak.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out',
+      once: true,
+    });
+
+    // Billing Toggle
+    var billingToggle = document.getElementById('billing-toggle');
+    var btnMonthly = document.getElementById('btn-monthly');
+    var btnYearly = document.getElementById('btn-yearly');
+    var isYearlyBilling = false;
+
+    function updatePricing(isYearly) {
+      isYearlyBilling = isYearly;
+      billingToggle.checked = isYearly;
+
+      if (isYearly) {
+        btnMonthly.classList.remove('bg-white', 'text-secondary-900', 'shadow-md');
+        btnMonthly.classList.add('text-white/80');
+        btnYearly.classList.add('bg-white', 'text-secondary-900', 'shadow-md');
+        btnYearly.classList.remove('text-white/80');
+      } else {
+        btnMonthly.classList.add('bg-white', 'text-secondary-900', 'shadow-md');
+        btnMonthly.classList.remove('text-white/80');
+        btnYearly.classList.remove('bg-white', 'text-secondary-900', 'shadow-md');
+        btnYearly.classList.add('text-white/80');
+      }
+
+      document.querySelectorAll('.price-monthly').forEach(function(el) { el.classList.toggle('hidden', isYearly); });
+      document.querySelectorAll('.price-yearly').forEach(function(el) { el.classList.toggle('hidden', !isYearly); });
+      document.querySelectorAll('.price-suffix-monthly').forEach(function(el) { el.classList.toggle('hidden', isYearly); });
+      document.querySelectorAll('.price-suffix-yearly').forEach(function(el) { el.classList.toggle('hidden', !isYearly); });
+      document.querySelectorAll('.price-note-monthly').forEach(function(el) { el.classList.toggle('hidden', isYearly); });
+      document.querySelectorAll('.price-note-yearly').forEach(function(el) { el.classList.toggle('hidden', !isYearly); });
+    }
+
+    btnMonthly.addEventListener('click', function() { updatePricing(false); });
+    btnYearly.addEventListener('click', function() { updatePricing(true); });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-item').forEach(function(item) {
+      var question = item.querySelector('.faq-question');
+      var answer = item.querySelector('.faq-answer');
+      var icon = item.querySelector('.faq-icon');
+
+      question.addEventListener('click', function() {
+        document.querySelectorAll('.faq-item').forEach(function(otherItem) {
+          if (otherItem !== item) {
+            otherItem.querySelector('.faq-answer').classList.add('hidden');
+            otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+            otherItem.classList.remove('active');
+          }
+        });
+
+        var isOpening = answer.classList.contains('hidden');
+        answer.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+        item.classList.toggle('active', isOpening);
+      });
+    });
+
+    // ================================
+    // PRICING SECTION - Dynamic Loading
+    // ================================
+    var API_URL = 'https://api.tablostudio.hu/api/plans';
+
+    function formatPriceValue(price) {
+      return price.toLocaleString('hu-HU');
+    }
+
+    function getMonthlyEquivalent(yearlyPrice) {
+      return Math.round(yearlyPrice / 12);
+    }
+
+    function createFeatureItem(featureText) {
+      var li = document.createElement('li');
+      li.className = 'flex items-center text-secondary-700';
+
+      var icon = document.createElement('i');
+      icon.setAttribute('data-lucide', 'check');
+      icon.className = 'w-5 h-5 text-green-500 mr-3 flex-shrink-0';
+
+      var span = document.createElement('span');
+      span.textContent = featureText;
+
+      li.appendChild(icon);
+      li.appendChild(span);
+      return li;
+    }
+
+    function createPricingCard(planId, plan, index) {
+      var isPopular = plan.popular === true;
+      var shortName = plan.name.replace('TablóStúdió ', '');
+      var monthlyPrice = plan.monthly_price;
+      var yearlyPrice = plan.yearly_price;
+      var monthlyEquiv = getMonthlyEquivalent(yearlyPrice);
+      var isVip = planId === 'vip';
+
+      var card = document.createElement('div');
+      card.setAttribute('data-aos', 'fade-up');
+      card.setAttribute('data-aos-delay', String(index * 100));
+      card.setAttribute('data-plan-id', planId);
+
+      if (isPopular) {
+        card.className = 'pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4 flex flex-col';
+      } else if (isVip) {
+        card.className = 'pricing-card pricing-card--vip bg-white rounded-2xl p-8 shadow-2xl border-2 border-amber-500 relative flex flex-col';
+      } else {
+        card.className = 'pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col';
+      }
+
+      if (isPopular) {
+        var popularBadge = document.createElement('div');
+        popularBadge.className = 'absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-600 to-primary-500 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg';
+        popularBadge.textContent = 'Legnépszerűbb';
+        card.appendChild(popularBadge);
+      }
+
+      if (isVip) {
+        var vipBadge = document.createElement('div');
+        vipBadge.className = 'absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-amber-600 text-white px-5 py-1.5 rounded-full text-sm font-bold shadow-lg';
+        vipBadge.textContent = 'Prémium';
+        card.appendChild(vipBadge);
+      }
+
+      var h3 = document.createElement('h3');
+      h3.className = 'text-xl font-display font-bold text-secondary-900 mb-2' + (isPopular || isVip ? ' mt-2' : '');
+      h3.textContent = shortName;
+      card.appendChild(h3);
+
+      var desc = document.createElement('p');
+      desc.className = 'text-secondary-500 text-sm mb-6';
+      desc.textContent = plan.description;
+      card.appendChild(desc);
+
+      var priceDiv = document.createElement('div');
+      priceDiv.className = 'mb-6';
+
+      var priceColor = isPopular ? 'text-primary-600' : 'text-secondary-900';
+
+      var priceMonthly = document.createElement('span');
+      priceMonthly.className = 'text-4xl font-bold ' + priceColor + ' price-monthly';
+      priceMonthly.textContent = formatPriceValue(monthlyPrice);
+
+      var priceYearly = document.createElement('span');
+      priceYearly.className = 'text-4xl font-bold ' + priceColor + ' price-yearly hidden';
+      priceYearly.textContent = formatPriceValue(yearlyPrice);
+
+      var suffixMonthly = document.createElement('span');
+      suffixMonthly.className = 'text-lg font-medium text-secondary-500 price-suffix-monthly';
+      suffixMonthly.textContent = ' Ft/hó';
+
+      var suffixYearly = document.createElement('span');
+      suffixYearly.className = 'text-lg font-medium text-secondary-500 price-suffix-yearly hidden';
+      suffixYearly.textContent = ' Ft/év';
+
+      priceDiv.appendChild(priceMonthly);
+      priceDiv.appendChild(priceYearly);
+      priceDiv.appendChild(suffixMonthly);
+      priceDiv.appendChild(suffixYearly);
+      card.appendChild(priceDiv);
+
+      var noteYearly = document.createElement('p');
+      noteYearly.className = 'text-sm text-secondary-400 mb-6 h-5 price-note-yearly hidden';
+      noteYearly.textContent = formatPriceValue(monthlyEquiv) + ' Ft/hó-val egyenértékű';
+      card.appendChild(noteYearly);
+
+      var noteMonthly = document.createElement('p');
+      noteMonthly.className = 'text-sm text-secondary-400 mb-6 h-5 price-note-monthly';
+      noteMonthly.textContent = '\u00A0';
+      card.appendChild(noteMonthly);
+
+      var ul = document.createElement('ul');
+      ul.className = 'space-y-4 mb-8 flex-grow';
+      plan.feature_labels.forEach(function(feature) {
+        ul.appendChild(createFeatureItem(feature));
+      });
+      card.appendChild(ul);
+
+      var btn = document.createElement('a');
+      btn.href = 'https://app.tablostudio.hu/register-app?plan=' + planId;
+      if (isPopular) {
+        btn.className = 'btn-primary w-full justify-center shadow-lg shadow-primary-500/30 mt-auto';
+      } else if (isVip) {
+        btn.className = 'btn-accent w-full justify-center shadow-lg shadow-amber-500/30 mt-auto';
+      } else {
+        btn.className = 'btn-secondary w-full justify-center mt-auto';
+      }
+      btn.textContent = 'Kezdés';
+      card.appendChild(btn);
+
+      return card;
+    }
+
+    function renderPricingCards(plansData) {
+      var container = document.getElementById('pricing-cards');
+      if (!container || !plansData.plans) return;
+
+      var planOrder = ['alap', 'iskola', 'studio', 'vip'];
+      var sortedPlans = planOrder
+        .filter(function(id) { return plansData.plans[id]; })
+        .map(function(id) { return { id: id, plan: plansData.plans[id] }; });
+
+      container.textContent = '';
+
+      sortedPlans.forEach(function(item, index) {
+        container.appendChild(createPricingCard(item.id, item.plan, index));
+      });
+
+      var numPlans = sortedPlans.length;
+      if (numPlans === 4) {
+        container.classList.remove('md:grid-cols-3');
+        container.classList.add('md:grid-cols-2', 'lg:grid-cols-4');
+      } else if (numPlans === 3) {
+        container.classList.remove('lg:grid-cols-4');
+        container.classList.add('md:grid-cols-3');
+      }
+
+      lucide.createIcons();
+      AOS.refresh();
+      updatePricing(isYearlyBilling);
+    }
+
+    async function loadPricingData() {
+      try {
+        var response = await fetch(API_URL);
+        if (!response.ok) throw new Error('API request failed');
+        var data = await response.json();
+        renderPricingCards(data);
+      } catch (error) {
+        console.warn('Failed to load pricing from API, using fallback:', error);
+        var fallbackData = {
+          plans: {
+            alap: {
+              name: 'TablóStúdió Alap',
+              description: 'Kisebb fotósoknak',
+              popular: false,
+              monthly_price: 4990,
+              yearly_price: 49900,
+              feature_labels: ['5 GB tárhely', 'Max. 10 osztály', 'Max. 20 iskola', 'Online képválasztás', 'Sablon szerkesztő', 'QR kódos megosztás', 'Email támogatás']
+            },
+            iskola: {
+              name: 'TablóStúdió Iskola',
+              description: 'Legtöbb fotósnak ideális',
+              popular: true,
+              monthly_price: 14990,
+              yearly_price: 149900,
+              feature_labels: ['100 GB tárhely', 'Max. 20 osztály', 'Korlátlan iskola', 'Saját subdomain', 'Online fizetés (Stripe)', 'SMS értesítések', 'Prioritás támogatás']
+            },
+            studio: {
+              name: 'TablóStúdió Stúdió',
+              description: 'Nagyobb stúdióknak',
+              popular: false,
+              monthly_price: 29990,
+              yearly_price: 299900,
+              feature_labels: ['500 GB tárhely', 'Korlátlan osztály', 'Custom domain', 'White-label (saját márka)', 'API hozzáférés', 'Dedikált support']
+            },
+            vip: {
+              name: 'TablóStúdió VIP',
+              description: 'Korlátlan tárhely és minden funkció',
+              popular: false,
+              monthly_price: 49990,
+              yearly_price: 499900,
+              feature_labels: ['Korlátlan tárhely', 'Korlátlan osztály', 'Custom domain', 'White-label (saját márka)', 'API hozzáférés', 'Dedikált support', 'Prioritás támogatás']
+            }
+          }
+        };
+        renderPricingCards(fallbackData);
+      }
+    }
+
+    loadPricingData();
+  </script>
+</body>
+</html>
