@@ -63,17 +63,6 @@
           14 nap ingyenes próba, nincs rejtett költség, bármikor lemondható. Válaszd a neked megfelelő csomagot.
         </p>
 
-        <!-- Billing Toggle -->
-        <div class="inline-flex items-center justify-center bg-white/20 backdrop-blur-sm rounded-full p-1.5" data-aos="fade-up" data-aos-delay="150">
-          <button type="button" id="btn-monthly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-white text-secondary-900 shadow-md">
-            Havi
-          </button>
-          <button type="button" id="btn-yearly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 text-white/80 hover:text-white">
-            Éves
-            <span class="ml-1.5 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">-17%</span>
-          </button>
-          <input type="checkbox" id="billing-toggle" class="sr-only">
-        </div>
       </div>
     </div>
   </section>
@@ -83,6 +72,19 @@
        ============================================ -->
   <section class="section bg-secondary-50 -mt-1">
     <div class="container-custom">
+      <!-- Billing Toggle -->
+      <div class="text-center mb-10" data-aos="fade-up" data-aos-delay="150">
+        <div class="inline-flex items-center justify-center bg-secondary-100 rounded-full p-1.5">
+          <button type="button" id="btn-monthly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 bg-white text-secondary-900 shadow-md">
+            Havi
+          </button>
+          <button type="button" id="btn-yearly" class="billing-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 text-secondary-500 hover:text-secondary-700">
+            Éves
+            <span class="ml-1.5 bg-green-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">-17%</span>
+          </button>
+          <input type="checkbox" id="billing-toggle" class="sr-only">
+        </div>
+      </div>
       <div class="pricing-carousel-wrap max-w-6xl mx-auto">
       <div id="pricing-cards" class="pricing-carousel">
         <!-- Skeleton loading -->
@@ -718,14 +720,14 @@
 
       if (isYearly) {
         btnMonthly.classList.remove('bg-white', 'text-secondary-900', 'shadow-md');
-        btnMonthly.classList.add('text-white/80');
+        btnMonthly.classList.add('text-secondary-500');
         btnYearly.classList.add('bg-white', 'text-secondary-900', 'shadow-md');
-        btnYearly.classList.remove('text-white/80');
+        btnYearly.classList.remove('text-secondary-500');
       } else {
         btnMonthly.classList.add('bg-white', 'text-secondary-900', 'shadow-md');
-        btnMonthly.classList.remove('text-white/80');
+        btnMonthly.classList.remove('text-secondary-500');
         btnYearly.classList.remove('bg-white', 'text-secondary-900', 'shadow-md');
-        btnYearly.classList.add('text-white/80');
+        btnYearly.classList.add('text-secondary-500');
       }
 
       document.querySelectorAll('.price-monthly').forEach(function(el) { el.classList.toggle('hidden', isYearly); });
@@ -956,6 +958,36 @@
     }
 
     loadPricingData();
+
+    // Desktop drag-to-scroll a pricing carousel-hez
+    document.querySelectorAll('.pricing-carousel').forEach(function(carousel) {
+      var isDown = false;
+      var startX;
+      var scrollLeft;
+
+      carousel.addEventListener('mousedown', function(e) {
+        if (e.target.closest('a, button')) return;
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      carousel.addEventListener('mouseleave', function() {
+        isDown = false;
+      });
+
+      carousel.addEventListener('mouseup', function() {
+        isDown = false;
+      });
+
+      carousel.addEventListener('mousemove', function(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        var x = e.pageX - carousel.offsetLeft;
+        var walk = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+    });
   </script>
 </body>
 </html>

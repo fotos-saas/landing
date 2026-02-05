@@ -1240,6 +1240,36 @@
 
     // Load pricing on page load
     loadPricingData();
+
+    // Desktop drag-to-scroll a pricing carousel-hez
+    document.querySelectorAll('.pricing-carousel').forEach(function(carousel) {
+      var isDown = false;
+      var startX;
+      var scrollLeft;
+
+      carousel.addEventListener('mousedown', function(e) {
+        if (e.target.closest('a, button')) return;
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      carousel.addEventListener('mouseleave', function() {
+        isDown = false;
+      });
+
+      carousel.addEventListener('mouseup', function() {
+        isDown = false;
+      });
+
+      carousel.addEventListener('mousemove', function(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        var x = e.pageX - carousel.offsetLeft;
+        var walk = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+    });
   </script>
 </body>
 </html>

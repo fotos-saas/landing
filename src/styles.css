@@ -152,8 +152,16 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    padding: 1rem 2rem 1.5rem;
+    padding: 2rem 2rem 2.5rem;
+    margin: -2rem 0 -2.5rem;
     scrollbar-width: none; /* Firefox */
+    cursor: grab;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .pricing-carousel:active {
+    cursor: grabbing;
   }
 
   .pricing-carousel::-webkit-scrollbar {
