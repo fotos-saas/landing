@@ -122,8 +122,8 @@
   .pricing-carousel-wrap {
     position: relative;
     overflow: hidden;
-    padding: 2rem 0 1.5rem;
-    margin: -2rem 0 -1.5rem;
+    padding: 2.5rem 0 2.5rem;
+    margin: -2.5rem 0 -2.5rem;
   }
 
   /* Fade edges - jelzi hogy van még tartalom */
@@ -155,7 +155,7 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    padding: 0.5rem 2rem 0.5rem;
+    padding: 1.5rem 2rem 2rem;
     scrollbar-width: none; /* Firefox */
     cursor: grab;
     -webkit-user-select: none;
@@ -190,7 +190,7 @@
   @media (min-width: 1024px) {
     .pricing-carousel {
       gap: 1.5rem;
-      padding: 0.5rem 2.5rem 0.5rem;
+      padding: 1.5rem 2.5rem 2rem;
     }
 
     .pricing-carousel > * {
