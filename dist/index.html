@@ -334,6 +334,12 @@
 
       <!-- Pricing cards - dynamically loaded from API -->
       <div class="pricing-carousel-wrap max-w-6xl mx-auto">
+      <button type="button" class="pricing-carousel-btn pricing-carousel-btn--prev is-hidden" aria-label="Előző">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button type="button" class="pricing-carousel-btn pricing-carousel-btn--next" aria-label="Következő">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
       <div id="pricing-cards" class="pricing-carousel">
         <!-- Cards will be rendered dynamically by JavaScript -->
         <!-- Fallback skeleton while loading -->
@@ -1241,8 +1247,14 @@
     // Load pricing on page load
     loadPricingData();
 
-    // Desktop drag-to-scroll a pricing carousel-hez
-    document.querySelectorAll('.pricing-carousel').forEach(function(carousel) {
+    // Drag-to-scroll + nav gombok a pricing carousel-hez
+    document.querySelectorAll('.pricing-carousel-wrap').forEach(function(wrap) {
+      var carousel = wrap.querySelector('.pricing-carousel');
+      var prevBtn = wrap.querySelector('.pricing-carousel-btn--prev');
+      var nextBtn = wrap.querySelector('.pricing-carousel-btn--next');
+      if (!carousel) return;
+
+      // Drag-to-scroll
       var isDown = false;
       var startX;
       var scrollLeft;
@@ -1254,13 +1266,8 @@
         scrollLeft = carousel.scrollLeft;
       });
 
-      carousel.addEventListener('mouseleave', function() {
-        isDown = false;
-      });
-
-      carousel.addEventListener('mouseup', function() {
-        isDown = false;
-      });
+      carousel.addEventListener('mouseleave', function() { isDown = false; });
+      carousel.addEventListener('mouseup', function() { isDown = false; });
 
       carousel.addEventListener('mousemove', function(e) {
         if (!isDown) return;
@@ -1269,6 +1276,37 @@
         var walk = (x - startX) * 1.5;
         carousel.scrollLeft = scrollLeft - walk;
       });
+
+      // Nav gombok
+      function getCardWidth() {
+        var card = carousel.querySelector('.pricing-card, .pricing-card-skeleton');
+        if (!card) return 300;
+        return card.offsetWidth + parseFloat(getComputedStyle(carousel).gap || 16);
+      }
+
+      function updateNavButtons() {
+        if (!prevBtn || !nextBtn) return;
+        prevBtn.classList.toggle('is-hidden', carousel.scrollLeft <= 10);
+        nextBtn.classList.toggle('is-hidden', carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 10);
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+          carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+          carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        });
+      }
+
+      carousel.addEventListener('scroll', updateNavButtons);
+      updateNavButtons();
+      // Frissítés amikor a kártyák betöltődnek
+      var observer = new MutationObserver(updateNavButtons);
+      observer.observe(carousel, { childList: true });
     });
   </script>
 </body>
