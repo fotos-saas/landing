@@ -83,9 +83,9 @@
        ============================================ -->
   <section class="section bg-secondary-50 -mt-1">
     <div class="container-custom">
-      <div id="pricing-cards" class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:overflow-visible md:snap-none md:pb-0 max-w-6xl mx-auto pricing-carousel">
+      <div id="pricing-cards" class="pricing-carousel max-w-6xl mx-auto">
         <!-- Skeleton loading -->
-        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none">
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
           <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
           <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
           <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
@@ -96,7 +96,7 @@
           </div>
           <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
-        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none">
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
           <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
           <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
           <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
@@ -107,7 +107,7 @@
           </div>
           <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
-        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none">
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
           <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
           <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
           <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
@@ -118,7 +118,7 @@
           </div>
           <div class="h-12 bg-secondary-200 rounded"></div>
         </div>
-        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none">
+        <div class="pricing-card-skeleton bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 animate-pulse">
           <div class="h-6 bg-secondary-200 rounded w-24 mb-4"></div>
           <div class="h-4 bg-secondary-100 rounded w-32 mb-6"></div>
           <div class="h-10 bg-secondary-200 rounded w-40 mb-6"></div>
@@ -802,14 +802,11 @@
       card.setAttribute('data-plan-id', planId);
 
       if (isPopular) {
-        var snapClass = 'min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none';
-        card.className = 'pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative md:-mt-4 md:mb-4 flex flex-col ' + snapClass;
+        card.className = 'pricing-card pricing-card--popular bg-white rounded-2xl p-8 shadow-2xl border-2 border-primary-500 relative flex flex-col';
       } else if (isVip) {
-        var snapClass = 'min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none';
-        card.className = 'pricing-card pricing-card--vip bg-white rounded-2xl p-8 shadow-2xl border-2 border-amber-500 relative flex flex-col ' + snapClass;
+        card.className = 'pricing-card pricing-card--vip bg-white rounded-2xl p-8 shadow-2xl border-2 border-amber-500 relative flex flex-col';
       } else {
-        var snapClass = 'min-w-[280px] snap-center flex-shrink-0 md:min-w-0 md:flex-shrink md:snap-align-none';
-        card.className = 'pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col ' + snapClass;
+        card.className = 'pricing-card bg-white rounded-2xl p-8 shadow-lg border border-secondary-100 hover:shadow-xl transition-all duration-300 flex flex-col';
       }
 
       if (isPopular) {
@@ -902,15 +899,6 @@
       sortedPlans.forEach(function(item, index) {
         container.appendChild(createPricingCard(item.id, item.plan, index));
       });
-
-      var numPlans = sortedPlans.length;
-      if (numPlans === 4) {
-        container.classList.remove('md:grid-cols-3');
-        container.classList.add('md:grid-cols-2', 'lg:grid-cols-4');
-      } else if (numPlans === 3) {
-        container.classList.remove('lg:grid-cols-4');
-        container.classList.add('md:grid-cols-3');
-      }
 
       lucide.createIcons();
       AOS.refresh();

@@ -117,6 +117,49 @@
   .pricing-card:not(.pricing-card--popular):hover {
     @apply border-primary-200 shadow-xl;
   }
+
+  /* Pricing carousel - mobile horizontal scroll, desktop grid */
+  .pricing-carousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1.5rem;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .pricing-carousel::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .pricing-carousel > * {
+    min-width: 280px;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 768px) {
+    .pricing-carousel {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      overflow: visible;
+      scroll-snap-type: none;
+      padding-bottom: 0;
+    }
+
+    .pricing-carousel > * {
+      min-width: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .pricing-carousel {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+  }
 }
 
 /* Animation utilities */
